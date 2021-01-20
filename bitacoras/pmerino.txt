@@ -1,0 +1,1350 @@
+=========================================================================================
+01/Abril/2004:
+
+1.- Se agrega la clase TransformacionGrafica.java.
+2.- Se agrega la clase Mapa.java.
+
+=========================================================================================
+05/Abril/2004:
+
+1.- Se saca los menús: Ecosistema, Economía, Operación e Integración.
+2.- Se agrega en el panelVisorArchivos el ítem Configuración para cada modelo.
+3.- Se cambia de nombre las clases: PanelEspacialEcosistema, PanelConfiguracionEcosistema,
+    PanelTemporalEcosistema, PanelSensibilidadEcosistema y PanelReporteEcosistema.
+4.- Se cambia el nombre de los archivos de imágenes.
+
+=========================================================================================
+06/Abril/2004:
+
+1.- Se agrega la clase PanelMapaEcosistema y PanelControlEcosistema.
+
+=========================================================================================
+16/Abril/2004:
+
+1.- Se arregla la ortografía en comentarios de la clase BaseDatoMotor.java.
+2.- Se verifica el código de la clase CircanaPro.java.
+3.- Se verifica el código de la clase ConfiguracionEspacial.java y se realizan cambios en
+    ella. Se recomienda hacer private los atributos de la clase (que son públicos) e
+    implementar los métodos que establecen y retornar el valor para esos atributos. Esto
+    con alusión a las clases ConfiguracionNeuronalBP.java y ConfiguracionNeuronalRBF.java.
+4.- Se verifica el código de la clase EventoFrame. Se adjuntan más comentarios.
+5.- Se verifica el código de la clase EventoMenuItem. Se adjuntaron los fragmentos de
+    código en el método actionPerformed() para manejar los eventos de los JMenuItem
+    restantes.
+6.- Se verifica el código de la clase EventoRadioButton y se corrigen algunos comentarios.
+7.- Se verifica el código de la clase EventoRadioButtonMenuItem y se corrigen algunos
+    comentarios.
+8.- Se verifica el código de la clase FrameAcerca y se adjuntan algunos comentarios.
+9.- Se verifica el código de la clase FrameCircanaPro y se corrigen algunos errores
+    (Atributos de más, métodos de más y orden de algunos métodos).
+10.- Se verifica el código de la clase FrameEcosistema y se corrigen algunos errores
+    (Orden de los paneles).
+11.- Se verifica el código de la clase FrameIntegracion y se adjuntan algunos comentarios.
+12.- Se verifica el código de la clase FrameOperacion y se adjuntan algunos comentarios.
+13.- Se verifica el código de la clase Mapa y se corrigen algunos errores.
+14.- Se verifica el código de las clases MenuAdministracionDatos, MenuArchivo, MenuAyuda,
+     MenuHerramientas y MenuVentana y se les adjuntan algunos comentarios.
+
+=========================================================================================
+23/Abril/2004:
+
+1.- Se modifica el archivo ConfiguracionEspacial.
+2.- Se modifica el archivo Coordenada.
+2.- Se modifica el archivo Grado.
+3.- Se modifica el archivo SubPanelMapaEcosistema.
+4.- Se agregó el método decrementar5Minutos() e incrementar5Minutos() en la clase
+    Servicio.
+
+=========================================================================================
+28/Abril/2004:
+
+1.- Se modifica "profundidad" por "altura" en: ConfiguracionEspacial, Coordenada, Mapa,
+    SubPanelMapaEcosistema.
+2.- Se implementan los métodos de la clase EventoSlider.
+3.- Se modifica la clase Mapa.
+4.- Se modifica la clase SubPanelMapaEcosistema:
+	- Se implementan los métodos que mueven el foco hacia el noroeste, norte, noreste,
+	  oeste, centrar, este, suroeste, sur y sureste.
+	- Se cambian métodos anteriores.
+	- Se implementan nuevos métodos.
+	- Se agregan atributos.
+5.- Se modifica la clase SubPanelControlEcosistema.
+
+=========================================================================================
+25/Julio/2004:
+
+1.- Se revisa la clase CircanaPro.
+2.- Se revisa la clase FrameCircanaPro. Se modifican algunos comentarios. Se modifican
+    algunas clases. Especial énfasis en el cambio de MenuArchivo por MenuProyecto y
+    PanelVisorArchivos por PanelVisor.
+3.- Se revisa la clase MenuProyecto. Se hacen los cambios respectivos por el cambio de
+    nombre de la clase.
+4.- Se revisa la clase MenuAdministracionDatos. Se cambia el setMnemonic().
+5.- Se revisa la clase MenuHerramientas.
+6.- Se revisa la clase MenuVentana.
+7.- Se revisa la clase MenuAyuda.
+8.- Se revisa la clase PanelBotonera. Se cambia el setToolTips().
+9.- Se revisa la clase PanelVisor. Se hacen los cambios respectivos por el cambio de
+    nombre de la clase.
+10.- Se revisa la clase PanelEscritorio. Se cambia el método cargarConfiguracionFrame.
+11.- Se revisa la clase PanelEstado.
+12.- Se revisa la clase FrameAcerca.
+13.- Se borran las clases y archivos Archivo, JFileChooserCircana y JFilterChooserCircana.
+14.- Se revisa la clase EventoBoton. Se cambian algunos comentarios. Se cambia el nombre
+     de la clase y los contructores respectivos.
+15.- Se revisa la clase EventoFrame.
+16.- Se revisa la clase EventoMenuItem.
+17.- Se revisa la clase EventoRadioButton.
+18.- Se revisa la clase EventoRadioButtonMenuItem.
+19.- Se revisa la clase EventoSlider. Se comenta el constructor y el inicio de la clase.
+20.- Se revisa la clase EventoTree.
+21.- Se revisa la clase FrameAcerca.
+22.- Se revisa la clase FrameIntegracion.
+23.- Se revisa la clase FrameOperacion.
+24.- Se revisa la clase FrameProyecto. Se corrijen algunos comentarios.
+25.- Se revisa la clase BaseDatoMotor. Se corrijen algunos errores de programación. Se
+     corrijen algunos comentarios.
+26.- Se revisa la clase Coordenada. Se corrijen algunos comentarios.
+27.- Se revisa la clase Grado. Se corrijen algunos comentarios.
+
+=========================================================================================
+26/Julio/2004:
+
+1.- Se agregan los items "configuración" y "reporte" a los modelos "Operación" e
+    "Integración" en la clase PanelVisor. Esto con motivo de esquematizar de mejor manera
+    la apariencia final del PanelVisor.
+2.- Se ordena la forma, tamaño y ubicación con la que aparecen al comienzo los frames:
+    FrameProyecto, FrameEcosistema, FrameEconomía, FrameOperación, FrameIntegración.
+    Para esto se hacen cambios en las siguientes clases:
+    - PanelEscritorio.
+    - FrameCircanaPro.
+    - EventoTree.
+    - FrameProyecto.
+    - FrameEcosistema.
+    - FrameEconomia.
+    - FrameOperacion.
+    - FrameIntegracion.
+    - EventoButton.
+    Se crean las siguientes clases:
+    - PanelReporteOperacion.
+    - PanelConfiguracionOperacion.
+    - PanelReporteIntegracion.
+    - PanelConfiguracionIntegracion.
+
+=========================================================================================
+27/Julio/2004:
+
+1.- Se hacen modificaciones en la clase SubPanelMapaEcosistema.
+2.- Se hacen modificaciones importantes en la clase Mapa.
+3.- Se hacen modificaciones en la clase Coordenada. Se agrega un constructor. Se agrega el
+    método de comparacion de coordenadas.
+4.- Se hacen modificaciones en la clase Grado. Se agrega un constructor. Se agrega el
+    método de comparación de grados.
+
+=========================================================================================
+28/Julio/2004:
+
+1.- Cambios en la clase SubPanelMapaEcosistema.
+2.- Cambios en la clase Mapa.
+3.- Cambios en la clase TransformacionGrafica.
+
+=========================================================================================
+29/Julio/2004:
+
+1.- Cambios en la clase SubPanelMapaEcosistema.
+2.- Cambios en la clase Mapa.
+3.- Cambios en la clase Grado. Se agregan dos constructores.
+4.- Cambios en la clase Servicio. Se cambian los métodos:
+	- decrementar5Minutos() por decrementarMinutos().
+	- incrementar5Minutos() por incrementarMinutos().
+
+=========================================================================================
+30/Julio/2004:
+
+1.- Cambios en la clase SubPanelMapaEcosistema.
+2.- Cambios en la clase Mapa.
+3.- Cambios en la clase ConfiguracionEspacial.
+4.- Cambios en la clase Grado.
+4.- Cambios en la clase Servicio. El método incrementarGrados y decrementarGrados.
+
+=========================================================================================
+02/Agosto/2004:
+
+1.- Se agrega una nueva librería C:\j2sdk1.4.2_05\jre\lib\ext es la siguiente:
+    jp-go-ipa-jgcl.jar (Sirve para operaciones matemáticas y gráficas avanzadas).
+2.- Se agregan tres archivos testeadores:
+	- BSpline3DJGCL.java
+	- BSpline3DJGCLLookup.java
+	- Testmapa.html
+
+=========================================================================================
+04/Agosto/2004:
+
+1.- Se eliminan tres archivos testeadores:
+	- BSpline3DJGCL.java
+	- BSpline3DJGCLLookup.java
+	- Testmapa.html
+2.- Cambios en la clase SubPanelMapaEcosistema.
+3.- Cambios en la clase Mapa.
+4.- Se agregan dos métodos en la clase Servicio.
+5.- Cambios en la clase ConfiguracionEspacial.
+6.- Cambios en la clase TransformacionGrafica:
+	- Se agrega un constructor.
+	- Se modifica establecerFactores().
+	- Se modifica obtenerU().
+	- Se modifica obtenerV().
+	- Se modifica obtenerX().
+	- Se modifica obtenerY().
+
+=========================================================================================
+05/Agosto/2004:
+
+1.- Cambios en la clase PanelEspacialEcosistema:
+	- Se cambia el tamaño de los subpaneles.
+2.- Cambios en la clase SubPanelControlEcosistema:
+	- Se cambia el tamaño de los botones.
+	- Se cambia la fuente a los botones.
+3.- Cambios en la clase ConfiguracionEspacial.
+4.- Cambios en la clase Mapa.
+
+=========================================================================================
+06/Agosto/2004:
+
+1.- Se agregan las siguientes clases al proyecto:
+	- AutomataCeluluar.
+	- Grilla.
+	- Celda.
+	- Vecindad.
+	- Individuo.
+	- VistaMapa.
+	- TransformacionModelo.
+2.- Cambios en la clase ConfiguracionEspacial.
+3.- Cambios en la clase SubPanelMapaEcosistema.
+4.- Cambios en la clase Coordenada.
+5.- Cambios en la clase Grado.
+5.- Cambios en la clase Mapa.
+6.- Cambios en la clase Servicio.
+7.- Cambios en la clase TransformacionGrafica.
+
+=========================================================================================
+07/Agosto/2004:
+
+1.- Cambios en la clase TransformacionModelo.
+2.- Cambios en la clase SubPanelMapaEcosistema.
+3.- Cambios en la clase Mapa. Se optimiza el sistema pasando las longitudes y latitudes
+    a double. De ahora en adelante se trabajará con este formato. La comunicación con
+    la clase SubPanelMapaEcosistema es mas fluida y necesita de menos conversiones de
+    unidades.
+4.- Cambios en la clase Grilla.
+5.- Cambios en la clase ConfiguracionEspacial.
+6.- Cambios en la clase Grado.
+
+=========================================================================================
+08/Agosto/2004:
+
+1.- Cambios en la clase TransformacionModelo.
+2.- Cambios en la clase SubPanelMapaEcosistema.
+3.- Cambios en la clase TransformacionGrafica.
+4.- Cambios en la clase Mapa.
+
+=========================================================================================
+09/Agosto/2004:
+
+1.- Cambios en la clase Individuo.
+2.- Cambios en la clase AutomataCelular.
+3.- Cambios en la clase Celda.
+4.- Cambios en la clase ConfiguracionEspacial.
+5.- Cambios en la clase Coordenada.
+6.- Cambios en la clase EventoButton. Se le incorpora los eventos a los botones
+    Acercar, Alejar y Restablecer.
+7.- Cambios en la clase EventoSlider. Ahora los métodos estan sin implementar.
+9.- Cambios en la clase Grilla.
+10.- Cambios en la clase PanelEspacialEcosistema.
+11.- Cambios en la clase SubPanelControlEcosistema.
+12.- Cambios en la clase SubPanelMapaEcosistema.
+13.- Cambios en la clase Mapa.
+14.- Se cambia el nombre a la clase ConfiguracionEspacial por ConfiguracionMapa.
+15.- Se elimina la clase VistaMapa.
+16.- Se agrega la clase ConfiguracionAutomataCelular.
+17.- Cambios en Proyecto:
+	 - La clase estática ahora es ConfiguracionMapa.
+	 - Se agrega el llamdo al método ConfiguracionAutomataCelular.cargar() en el
+	   método cargar.
+
+OBSERVACIONES:
+
+* Llegar a un acuerdo sobre si son private o public los atributos de las clases:
+  - ConfiguracionEspacial.
+  - ConfiguracionNeuronalRBF.
+  - ConfiguracionNeuronalBP.
+  
+  * Paul propone que sean públicas, con lo cual no es necesarios crear los métodos
+    establecer y obtener para cada atributo.
+  * Pato propone que sean privadas, con lo cual se deberían implementar los métodos de
+    establecer y obtener para cada atributo. La ventaja es la mayor seguridad de datos
+    y el mayor grado de encapsulación).
+  
+  -> Se llega al acuerdo de dejarlas privadas.
+
+=========================================================================================
+11/Agosto/2004:
+
+1.- Cambios en SubPanelMapaEcosistema.
+2.- Cambios en ConfiguracionMapa.
+3.- Cambios en Servicio.
+4.- Cambios en Grado.
+
+OBSERVACIONES:
+
+* Para el JavaDoc usar mayúsculas después de un @param o un @return y terminar las
+  oraciones con un punto.
+
+* Para el JavaDoc los comentarios de los atributos de las clases terminarlos con un
+  punto.
+
+* Para todos los métodos en donde se setean las variables, usar el
+  this.nombre_atributo dentro del método. Usar el nombre_atributo en el parámetro del
+  método.
+
+=========================================================================================
+12/Agosto/2004:
+
+1.- Cambios en la clase Mapa.
+2.- Cambios en la clase ConfiguracionMapa.
+3.- Cambios en la clase SubPanelMapaEcosistema.
+4.- Cambios en la clase TransformacionModelo.
+
+=========================================================================================
+15/Agosto/2004:
+
+1.- Cambios en la clase FrameEcosistema.
+2.- Cambios en la clase SubPanelMapaEcosistema.
+
+=========================================================================================
+18/Agosto/2004:
+
+1.- Cambios en la clase Proyecto:
+	- El atributo CONEXION ahora se deja como público. Esto porque:
+	  1. Para que las demás clases del sistema puedan utilizar la conexión sin la
+	     necesidad de volver a conectarse a la BD (Es necesario llamar al método
+	     conectar() en el constructor de la clase BaseDatoMotor).
+	  2. Para que se cree una sola instancia de la clase BaseDatoMotor en el sistema.
+	- Se agrega el método obtenerIdentificador(), obtenerNombre(),
+	  establecerIdentificador() y establecerNombre().
+	- Recomendación para cambiar los métodos cambiarFechaInicial() y
+	  cambiarFechaFinal() por establecer().
+	- El método incializarFechasSimulacion() se deja como private.
+2.- Se cambia el nombre de la clase ConfiguracionMapa por ConfiguracionEspacial.
+3.- Cambios en la clase FrameEcosistema.
+4.- Cambios en la clase Mapa.
+5.- Se incorpora la clase Vista.
+6.- Se incorpora la clase Longitud.
+7.- Se incorpora la clase Latitud.
+8.- Se incorpora la clase Region.
+
+OBSERVACIONES:
+
+* Usar el nombre de la tabla en las clases de configuracion y proyecto.
+
+* Sacar el atributo CONEXION en las clases de configuracion. Y usar la conexión
+  pública que tiene la clase Proyecto.
+
+=========================================================================================
+19/Agosto/2004:
+
+1.- Cambios en Mapa.
+2.- Cambios en ConfiguracionEspacial.
+3.- Cambios en Grilla.
+4.- Cambios en SubPanelMapaEcosistema.
+5.- Cambios en FrameEcosistema.
+6.- Cambios en PanelEspacialEcosistema.
+7.- Cambios en PanelEscriorio. Se saca el metodo cargarFrame() que no estaba siendo
+    utilizado por nada.
+8.- Cambios en FrameEconomia. Se deja en comentarios el llamado al método
+    configurarPaneles() en el constructor de esta clase. Esto para que compile.
+9.- Cambios en AutomataCelular.
+10.- Se cambia el nombre de la clase Grilla por Espacio.
+11.- Cambios en la clase SubPanelControlEcosistema.
+
+=========================================================================================
+20/Agosto/2004:
+
+1.- Cambios en FrameEcosistema. Se incorporar los procesos.
+2.- Cambios en ProcesoSegundoPlano. Se incorporar los procesos del FrameEcosistema y
+    se corrijen algunos comentarios.
+3.- Cambios en la clase EventoButton. Se sigue el standar de llamar al frameEcosistema
+    y no al panel, cuando se escucha un evento de botón en la botonera.
+4.- Cambios en la clase SubPanelMapaEcosistema.
+
+OBSERVACIONES:
+
+* Se dejan los métodos que cambian el valor del atributo como
+  establecerNombreAtributo().
+
+* Se deja pública la CONEXION de proyecto.
+
+* En cada frame se debe poner un método actualizarInformacion() el cual deberá llamar a
+  los métodos de los paneles que permitan actualizar la información relevante cambiada
+  en proyecto.
+
+=========================================================================================
+                                         SIN REVISAR
+=========================================================================================
+22/Agosto/2004:
+
+1.- Cambios en AutomataCelular.
+2- Cambios en Celda.
+3- Cambios en ConfiguracionAutomataCelular.
+4- Cambios en ConfiguracionEspacial.
+5- Cambios en Coordenada.
+6- Cambios en Espacio.
+7- Cambios en FrameEcosistema.
+8- Cambios en Grado.
+9- Cambios en Latitud.
+10.- Cambios en Longitud.
+11.- Cambios en Mapa. Ahora queda como una clase estática.
+12.- Cambios en PanelConfiguracionEcosistema.
+13.- Cambios en PanelEspacialEcosistema.
+14.- Cambios en PanelReporteEcosistema.
+15.- Cambios en PanelSensibilidadEcosistema.
+16.- Cambios en PanelTemporalEcosistema.
+17.- Cambios en Proyecto. Se le incorpora todos los llamados a
+18.- ConfiguracionAutomataCelular en cargar y guardar.
+19.- Cambios en SubPanelControlEcosistema.
+20.- Cambios en SubPanelMapaEcosistema.
+21.- Cambios en SuperIndividuo.
+22.- Cambios en Tiempo.
+23.- Cambios en TransformacionGrafica.
+24.- Cambios en TransformacionModelo.
+25.- Cambios en Vecindad.
+26.- Cambios en Vista.
+
+=========================================================================================
+23/Agosto/2004:
+
+1.- Cambios en Servicio:
+    - Se ordenan los métodos según su funcionalidad.
+    - Se cambian los comentarios.
+    - Se cambian los nombres a los métodos que no usaban verbos.
+    - Se agregan dos atributos.
+    - Se agrega el método obtenerPerimetro.
+2.- Cambios en todas las clases que lo ameritan:
+    - Coordenada.
+    - Grado.
+    - SubPanelMapaEcosistema
+    - Latitud
+    - Longitud
+    - Mapa
+    - Servicio
+3.- Cambios en Espacio.
+
+=========================================================================================
+03/Septiembre/2004:
+
+1.- Cambios en la clase Nodo -> NodoIdentificador.
+2.- Cambios en la clase Lista -> ListaIdentificador.
+
+=========================================================================================
+04/Septiembre/2004:
+
+1.- Se agrega la clase NodoDestino.
+2.- Se agrega la clase ListaDestino.
+3.- Cambios en la clase Celda.
+4.- Cambios en la clase AutomataCelular.
+5.- Cambios en el modelo de datos y en los scripts correspondientes:
+	* Se pone nombre a una relación que no lo tenía.
+	* La tabla "dato_ecosistemico" se relaciona con la tabla "dia".
+	* A la tabla "dato_ecosistemico" se le incorporan nuevos atributos.
+	* Se crea la tabla "caladero". Se le agregan sus respectivas relaciones.
+6.- Con respecto a las unidades de tiempo, se dejan las siguientes unidades:
+	* Segundo.
+	* Minuto.
+	* Hora.
+	* Día.
+
+=========================================================================================
+05/Septiembre/2004:
+
+1.- Cambios en AutomataCelular.
+2.- Cambios en Espacio.
+
+=========================================================================================
+06/Septiembre/2004:
+
+1.- Cambios en AutomataCelular.
+2.- Cambios en Espacio.
+3.- Cambios en SuperIndividuo.
+4.- Cambios en Tiempo.
+5.- Cambios en Servicio. Se agregan los siguientes métodos de conversión:
+	* transformarDiaSegundo(int)
+	* transformarDiaMinuto(int)
+	* transformarDiaHora(int)
+	* transformarHoraMinuto(int)
+	* transformarMinutoSegundo(int)
+6.- Cambios en Vecindad.
+
+=========================================================================================
+07/Septiembre/2004:
+
+1.- Cambios en AutomataCelular.
+2.- Cambios en SuperIndividuo.
+3.- Cambios en Vecindad.
+4.- Cambios en Espacio.
+5.- Cambios en Tiempo.
+6.- Cambios en el scripts de datos. Se comienza a utiliza solo las vecindades de
+    "Von Neumann" y "Moore". Las otras son consideradas como particularidades
+    de ellas.
+7.- Cambios en FrameEcosistema.
+8.- Cambios en SubPanelMapaEcosistema.
+
+=========================================================================================
+08/Septiembre/2004:
+
+1.- Cambios en Vecindad.
+2.- Se saca el tipo de espacio cíclico. Por considerarse no factible para un modelo
+    geográfico.
+    * Cambios en los scripts.
+    * Cambios en la clase Espacio.
+3.- Cambios en AutomataCelular.
+4.- Cambios en Tiempo.
+5.- Cambios en PanelConfiguracionEcosistema.
+
+=========================================================================================
+09/Septiembre/2004:
+
+1.- Cambios en PanelConfiguracionEcosistema.
+2.- Cambios en AutomataCelular.
+3.- Se agregan las siguientes clases al SuperIndividuo:
+	* VectorAtributo
+	* Creencia
+	* Deseo
+	* Intencion
+4.- Cambios en SuperIndividuo.
+
+=========================================================================================
+10/Septiembre/2004:
+
+1.- Se crean las clases:
+	* SuperCrustaceo.
+	* SuperPez.
+	* Recurso.
+	* SuperCamaronNailon.
+	* SuperLangostinoAmarillo.
+	* SuperLangostinoColorado.
+	* SuperMerluzaComun.
+	* SuperLenguado.
+2.- Cambios en la clase Atributo.
+
+=========================================================================================
+11/Septiembre/2004:
+
+1.- Nuevos scripts. Se han corregido los datos ecosistemicos y los recursos.
+2.- Cambios en Recurso.
+3.- Cambios en FrameEcosistema.
+4.- Cambios en AutomataCelular.
+5.- Cambios en SuperIndividuo.
+6.- Cambios en Atributo.
+7.- Cambios en Vecindad.
+
+=========================================================================================
+12/Septiembre/2004:
+
+1.- Cambios en SuperIndividuo.
+2.- Cambios en SuperCrustaceo.
+3.- Cambios en SuperPez.
+4.- Cambios en SuperCrustaceo.
+5.- Cambios en SuperCamaronNailon.
+6.- Cambios en SuperLangostinoAmarillo.
+7.- Cambios en SuperLangostinoColorado.
+8.- Cambios en SuperMerluzaComun.
+9.- Cambios en SuperLenguado.
+10.- Cambios en Recurso.
+11.- Cambios en AutomataCelular.
+12.- Cambios en Vecindad.
+13.- Cambios en Espacio.
+
+=========================================================================================
+13/Septiembre/2004:
+
+1.- Cambios en la clase Recurso.
+2.- Cambios en la clase FrameEcosistema.
+3.- Cambios en la clase Servicio. Se agrega el método: obtenerDiaMes() con otros
+	parámetros.
+4.- Cambios en la clase AutomataCelular.
+5.- Cambios en la clase Celda.
+6.- Cambios en la clase Espacio.
+7.- Cambios en la clase ListaIdentificador.
+8.- Cambios en la clase ListaDestino.
+9.- Se crea la interface Lista.
+10.- Cambios en la clase Vecindad.
+11.- Cambios en Servicio. Se agregan los siguientes métodos:
+	 * obtenerArea()
+	 * obtenerAreaTerrestre()
+	 * obtenerAreaCircunferencia()
+	 * otros métodos...
+
+=========================================================================================
+14/Septiembre/2004:
+
+1.- Cambios en Recurso.
+2.- Cambios en AutomataCelular.
+2.- Cambios en SuperIndividuo.
+
+=========================================================================================
+15/Septiembre/2004:
+
+1.- Cambios en AutomataCelular.
+2.- Cambios en SuperCamaronNailon.
+3.- Cambios en SuperCrustaceo.
+4.- Cambios en SuperIndividuo.
+5.- Cambios en SuperLangostinoAmarillo.
+6.- Cambios en SuperLangostinoColorado.
+7.- Cambios en SuperMerluzaComun.
+8.- Cambios en SuperLenguado.
+9.- Cambios en SuperPez.
+10.- Cambios en Recurso.
+11.- Cambios en Coordenada.
+
+=========================================================================================
+16/Septiembre/2004:
+
+1.- Cambios en SubPanelMapaEcosistema.
+2.- Cambios en Espacio.
+3.- Cambios en SuperIndividuo.
+4.- Cambios en Recurso.
+5.- Se agrega la clase Ajuste.
+6.- Cambios en Servicio. Se agregan los métodos obtenerAzarEntero() y
+	obtenerAzarDouble().
+7.- Cambios en SuperCrustaceo, SuperPez.
+8.- Cambios en SuperCamaronNailon, SuperLangostinoAmarillo y SuperLangostinoColorado.
+9.- Cambios en SuperMerluzaComun y SuperLenguadoOjosGrandes.
+
+=========================================================================================
+17/Septiembre/2004:
+
+1.- Cambios en AutomataCelular. Ahora se cargan los animales cuando se quiere iniciar
+    la simulación.
+2.-	Cambios en FrameEcosistema.
+3.- Cambios en SubPanelMapaEcosistema.
+4.- Cambios en PanelEstado.
+5.- Cambios en Proyecto:
+	* Se agrega el método obtenerFechaInicialFormatoFecha.
+	* Se agrega el método obtenerFechaFinalFormatoFecha.
+6.- Cambios en FrameEcosistema.
+7.- Cambios en ProcesoSegundoPlano. Se agrega en el método procesoejEcutar() el
+    llamado a los que tienen relacion con ecosistema y operacion.
+8.- Cambios en PanelConfiguracionEcosistema.
+
+=========================================================================================
+18/Septiembre/2004:
+
+1.- Cambios en FrameEcosistema.
+2.- Cambios en PanelEspacialEcosistema.
+3.- Cambios en SubPanelMapaEcosistema.
+4.- Cambios en SubPanelControlEcosistema.
+5.- Cambios en PanelTemporalEcosistema.
+6.- Cambios en PanelSensibilidadEcosistema.
+7.- Cambios en PanelReporteEcosistema.
+
+=========================================================================================
+19/Septiembre/2004:
+
+1.- La clase EventoSlider se cambia a EventoMouse y se implementa.
+2.- Cambios en FrameEcosistema.
+3.- Cambios en PanelEspacialEcosistema.
+4.- Cambios en SubPanelMapaEcosistema.
+5.- Cambios en ConfiguracionEspacial.
+6.- Cambios en Vista.
+7.- Cambios en EventoMouse.
+8.- Cambios en Recurso.
+9.- Cambios en Tiempo.
+10.- Cambios en Proyecto. Se agrega la sentencia para cargar los recursos cuando
+     se hace un nuevo proyecto.
+11.- Cambios en AutomataCelular.
+12.- Cambios en Espacio.
+
+=========================================================================================
+20/Septiembre/2004:
+
+1.-	Cambios en AutomataCelular.
+2.-	Cambios en SuperIndividuo.
+
+=========================================================================================
+25/Septiembre/2004:
+
+1.- Cambios en SuperIndividuo.
+2.- Cambios en Recurso.
+3.- Cambios en Servicio. Se agregan diversos métodos de azar.
+4.- Cambios en AutomataCelular.
+
+=========================================================================================
+26/Septiembre/2004:
+
+1.- Cambios en Recurso.
+2.- Cambios en Ajuste.
+3.- Cambios en AutomataCelular.
+4.- Cambios en SuperIndividuo.
+
+=========================================================================================
+27/Septiembre/2004:
+
+1.- Cambios en Recurso.
+
+=========================================================================================
+29/Septiembre/2004:
+
+1.- Cambios en Ajuste.
+2.- Cambios en Tiempo.
+3.- Cambios en FrameEcosistema.
+4.- Cambios en AutomataCelular.
+5.- Cambios en SuperIndividuo.
+
+=========================================================================================
+30/Septiembre/2004:
+
+1.- Cambios en AutomataCelular.
+2.- Cambios en SuperIndividuo.
+3.- Cambios en Vecindad.
+4.- Cambios en ListaDestino.
+5.- Cambios en ListaUbicacion.
+
+=========================================================================================
+07/Octubre/2004:
+
+1.- Cambios en Recurso.
+2.- Cambios en Ajuste.
+3.- Cambios en PanelConfiguracionEcosistema.
+4.- Cambios en EventoButton. Se agrega los métodos para el manejo del evento
+    en panelConfiguracionEcosistema.
+5.- Cambios en ProcesoSegundoPlano. Se agrega el índice para el manejo del hilo
+    en la clase FrameEcosistema.
+
+OBSERVACIONES:
+
+* Plantear la posibilidad de dejar todas las tablas referenciales con su código que
+  no sea incrementable y que comiencen con el código 0. Esto para que cuando sean
+  usados en JComboBox y/o Arreglos se puedan iniciar sin la necesidad de restar 1 a
+  los índices.
+
+=========================================================================================
+14/Octubre/2004:
+
+1.	Cambios en AutomataCelular.
+
+=========================================================================================
+15/Octubre/2004:
+
+1.-	Cambios en PanelConfiguracionEcosistema.
+2.-	Cambios en PanelEspacialEcosistema.
+3.-	Cambios en FrameEcosistema.
+4.-	Cambios en EventoButton. Se saca todo lo que usa FrameEcosistema:
+	* Atributos
+	* Constructores
+	* actionPerformed
+5.-	Cambios en el modelo. Ahora una región tiene un mapa. Esto para que el usuario
+	no pueda cambiar el mapa en la configuración espacial. Además es más real que
+	una región tenga un mapa y no varios.
+
+=========================================================================================
+18/Octubre/2004:
+
+1.-	Cambios en AutomataCelular.
+2.- Cambios en Espacio.
+3.- Cambios en FrameEcosistema.
+4.- Cambios en Servicio. Se agrega el método obtenerHora.
+5.- Cambios en OrigenDestino.
+6.- Cambios en Tiempo.
+7.- Cambios en SuperIndividuo.
+8.- Cambios en el Modelo de Datos y en los scripts:
+	* Se agrega la tabla recurso_mes y las relaciones actuar y aproximar.
+	* Se agregan los atributos: temperatura_inicial, temperatura_final,
+	  salinidad_inicial, salinidad_final, oxigeno_disuelto_inicial,
+	  oxigeno_disuelto_final a la tabla recurso.
+	* Se crea la tabla recurso_tipo_dieta y tipo_dieta las relaciones escoger y
+	  componer.
+	* Se crea la tabla tipo_fecundacion y la relación fecundar. Es tabla referencial
+	  de la tabla recurso.
+9.-	Cambios en Recurso.
+10.- Cambios en PanelTemporalEcosistema.
+
+=========================================================================================
+19/Octubre/2004:
+
+1.-	Cambios en Servicio. Se agrega el método transformarKilometroGrado.
+2.- Cambios en SubPanelMapaEcosistema.
+
+=========================================================================================
+21/Octubre/2004:
+
+1.- Cambios en PanelTemporalEcosistema.
+2.- Se crea la clase SubPanelTemporalEcosistema.
+
+OBSERVACIONES:
+
+*	Eliminar los atributos image y pantalla de la clase SubPanelGraficarEconomia.
+	También eliminar los import respectivos. También eliminar la sobrecarga de
+	métodos update y paint.
+*	Pato: agregar el metodo agregar en la clases estáticas ConfiguracionEspacial y
+	ConfiguracionAC.
+
+=========================================================================================
+22/Octubre/2004:
+
+1.-	Cambios en la clase ConfiguracionAC.
+2.- Cambios en la clase ConfiguracionEspacial.
+3.- Cambios en la clase SubPanelTemporalEcosistema.
+4.- Cambios en la clase Servicio. Se agrega el método obtenerNombreMes.
+5.- Cambios en la clase Proyecto. Se modifica el método guardarComo. Se incorporan
+	los llamados a los método agregar de las clases estáticas ConfiguracionAC y
+	ConfiguracionEspacial.
+6.- Se incorpora la clase Estadistica.
+
+=========================================================================================
+24/Octubre/2004:
+
+1.-	Cambios en la clase Estadistica.
+2.- Cambios en Servicio.
+	Se agregan los siguientes métodos de transformación de unidades de masa:
+	* transformarToneladaKilogramo
+	* transformarKilogramoGramo
+	* transformarToneladaGramo
+	* transformarGramoKilogramo
+	* transformarKilogramoTonelada
+	* transformarGramoTonelada
+	Se utiliza la sobrecarga de métodos en los azares.
+	Se agregan los siguientes métodos:
+	* obtenerAzar
+	* obtenerAzar
+3.-	Cambios en la clase SuperIndividuo.
+4.-	Cambios en la clase AutomataCelular.
+5.- Cambios en la clase Ajuste.
+6.- Cambios en las clases:
+	* SuperCrustaceo
+	* SuperPez
+7.- Cambios en las clases:
+	* SuperCamaronNailon
+	* SuperLangotinoAmarillo
+	* SuperLangotinoColorado
+	* SuperMerluzaComun
+	* SuperLenguadoOjosGrandes
+8.-	Cambios en la clase Recurso.
+
+=========================================================================================
+25/Octubre/2004:
+
+1.-	Cambios en Ajuste.
+2.- Cambios en AutomataCelular.
+3.- Cambios en Recurso.
+4.- Cambios en SuperIndividuo.
+5.- Cambios en FrameEcosistema.
+6.- Cambios en Estadistica.
+7.- Cambios en SubPanelTemporalEcosistema.
+
+=========================================================================================
+26/Octubre/2004:
+
+1.-	Cambios en EventoButton. Cambio en el actionPerformed.
+	Se agrega el evento al PanelTemporalEcosistema.
+
+=========================================================================================
+27/Octubre/2004:
+
+1.-	Cambios en Recurso.
+2.- Cambios en SuperIndividuo.
+3.- Cambios en AutomataCelular.
+
+=========================================================================================
+28/Octubre/2004:
+
+1.-	Cambios en FrameEcosistema.
+2.- Cambios en Tiempo.
+3.- Cambios en Mapa.
+4.- Cambios en AutomataCelular.
+5.- Cambios en Espacio.
+6.- Cambios en Estadistica.
+7.- Cambios en PanelEspacialEcosistema.
+8.- Cambios en SubPanelMapaEcosistema.
+9.- Cambios en SubPanelControlEcosistema.
+10.- Cambios en PanelTemporalEcosistema.
+10.- Cambios en PanelSensibilidadEcosistema.
+11.- Cambios en PanelReporteEcosistema.
+12.- Cambios en PanelConfiguracionEcosistema.
+
+=========================================================================================
+29/Octubre/2004:
+
+1.-	Cambios en Recurso.
+2.- Cambios en Ajuste.
+3.- Cambios en AutomataCelular.
+4.- Cambios en FrameEcosistema.
+
+=========================================================================================
+29/Octubre/2004:
+
+1.-	Cambios en Estadistica.
+2.-	Cambios en FrameEcosistema.
+3.-	Cambios en SubPanelMapaEcosistema.
+4.-	Cambios en SuperIndividuo.
+5.-	Cambios en Recurso.
+6.-	Cambios en AutomataCelular.
+7.- Cambios en Servicio. Se agregan varios métodos para el formateo de números.
+
+=========================================================================================
+30/Octubre/2004:
+
+1.-	Cambios en SubPanelMapaEcosistema.
+2.-	Cambios en SubPanelControlEcosistema.
+3.-	Cambios en PanelConfiguracionEcosistema.
+
+=========================================================================================
+1/Noviembre/2004:
+
+1.-	Cambios en Vecindad.
+2.- Cambios en AutomataCelular.
+3.- Cambios en SuperIndividuo.
+
+=========================================================================================
+5/Noviembre/2004:
+
+1.-	Cambios en Ajuste.
+2.- Cambios en AutomataCelular.
+3.- Cambios en SuperIndividuo.
+4.- Cambios en SubPanelTemporalEcosistema.
+5.- Cambios en Estadistica.
+
+=========================================================================================
+6/Noviembre/2004:
+
+1.-	Se cambia la clase PanelSensibilidadEcosistema por
+	PanelCuotasEcosistema.
+2.- Se elimina la imagen sensibilidad_ecosistema.
+3.- Cambios en PanelVisor:
+	* El atributo: sensibilidadEcosistema -> cuotasEcosistema.
+	* El método: nuevo().
+	* El método: obtenerSensibilidadEcosistema -> obtenerCuotasEcosistema.
+4.- Cambios en FrameEcosistema.
+5.- Cambios en PanelBotonera:
+	* El atributo: botonSensibilidadEcosistema -> botonCuotasEcosistema.
+	* El método: configurarBotones().
+	* El método: configurarEventos().
+	* El método: obtenerBotonSensibilidadEcosistema() ->
+	             obtenerBotonCuotasEcosistema().
+6.-	Cambios en EventoButton:
+	* El atributo: panelSensibilidadEcosistema -> panelCuotasEcosistema.
+	* El método constructor asociado a panelSensibilidadEcosistema.
+	* El método actionPerformed asociado al panelBotonera.
+	* El método actionPerformed asociado a panelSensibilidadEcosistema.
+7.- Cambios en EventoTree:
+	* El método valueChanged asociado a panelSensibilidadEcosistema.
+8.- Cambios en PanelEscritorio:
+	* El método: elegirSensibilidadEcosistema() -> elegirCuotasEcosistema().
+
+=========================================================================================
+7/Noviembre/2004:
+
+1.-	Cambios en FrameEcosistema.
+2.-	Cambios en AutomataCelular.
+
+=========================================================================================
+8/Noviembre/2004:
+
+1.-	Cambios en AutomataCelular.
+2.-	Cambios en SuperIndividuo.
+3.-	Cambios en Ajuste.
+4.-	Cambios en PanelTemporalEcosistema.
+5.- Cambios en Servicio:
+	* Se agrega el método obtenerCantidadDias().
+6.- Cambios en Tiempo.
+
+=========================================================================================
+9/Noviembre/2004:
+
+1.-	Cambios en EventoButton:
+	* Se agrega el manejador de evento para panelCuotasEcosistema.
+
+=========================================================================================
+15/Noviembre/2004:
+
+1.- Cambios en ConfiguracionAGT.
+	* Método cargarPuntosOferta() en la sentencia sql. Se está utilizando la
+	tabla caladero real, pero en realidad debería usarse la tabla caladero
+	resultado. Ojo con esto, que el programa se cae puesto que la tabla
+	caladero_resultado no tiene datos.
+2.- Cambios en Ajuste.
+3.- Cambios en EventoButton:
+	* Se agregan los eventos asociados al panelReporteEcosistema.
+4.- Cambios en Proyecto:
+	* Método limpiarResultado() se le agrega un if para eliminar los datos
+	en la tabla caladero_resultado.
+
+=========================================================================================
+29/Noviembre/2004:
+
+1.- Se ordena y documenta la clase CircanaPro.
+
+2.- Se ordena y documenta la clase FrameCircanaPro.
+	* Cuando se abre la aplicación no hay proyecto abierto.
+	* Se usa la plantilla (constructor).
+
+3.- Se ordena y documenta la clase MenuProyecto.
+	* Se agrega el método que habilita y deshabilita este menú.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+	* Se usa la plantilla (constructor).
+
+5.- Se ordena y documenta la clase MenuAdministracionDatos.
+	* Se agrega el método que habilita y deshabilita este menú.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+	* Se usa la plantilla (constructor).
+
+6.- Se ordena y documenta la clase MenuHerramientas.
+	* Se agrega el método que habilita y deshabilita este menú.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+	* Se usa la plantilla (constructor).
+
+7.- Se ordena y documenta la clase MenuVentana.
+	* Se agrega el método que habilita y deshabilita este menú.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+	* Se usa la plantilla (constructor).
+
+8.- Se ordena y documenta la clase MenuAyuda.
+	* Se agrega el método que habilita y deshabilita este menú.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+	* Se usa la plantilla (constructor).
+
+9.- Se ordena y documenta la clase EventoMenuItem.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+
+10.- Se ordena y documenta la clase EventoRadioButton.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+
+11.- Se ordena y documenta la clase PanelBotonera.
+	 * Se agrega el método que habilita y deshabilita este panel.
+	 * Se usa el estándar para los eventos (un solo parámetro en el const).
+	 * Se usa la plantilla (constructor).
+
+12.- Se ordena y documenta la clase PanelVisor.
+	 * Se agrega el método que habilita y deshabilita este panel.
+	 * Se usa el estándar para los eventos (un solo parámetro en el const).
+	 * Se usa la plantilla (constructor).
+
+13.- Se ordena y documenta la clase PanelEscritorio.
+	 * Se agrega el método que habilita y deshabilita este panel.
+	 * Se usa la plantilla (constructor).
+	 * Se implementa el método minimizarFrames, que debería ser mejorado.
+
+12.- Se ordena y documenta la clase PanelEstado.
+	 * Se agrega el método que habilita y deshabilita este panel.
+	 * Se usa la plantilla (constructor).
+
+15.- Se ordena y documenta la clase EventoTree.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+
+16.- Se ordena y documenta la clase EventoComboBox.
+	* Se usa el estándar para los eventos (un solo parámetro en el const).
+
+17.- Se documenta la clase Proyecto.
+	 * Se cambia lo que tiene que ver con la versión del proyecto.
+	 * Se incorporan los llamados a guardar y agregar de ConfiguracionRecurso.
+
+18.- Se ordena y documenta la clase Recurso.
+18.- Se ordena y documenta la clase ConfiguracionEspacial.
+19.- Se ordena y documenta la clase ConfiguracionAC.
+
+=========================================================================================
+15/Diciembre/2004:
+
+1.- Se mueve el archivo Proyecto.java a la carpeta proyecto.
+2.- Se cambian los scripts:
+	script2 - tablas: cambios en la tabla dato_ecosistemico_real.
+	script3 - datos: cambios en todo lo que tiene que ver con los recursos.
+
+=========================================================================================
+26/Febrero/2005:
+
+1.- Integración
+2.- Corrección de código
+3.- Corrección de documentación
+4.- Estándar de interfaces
+
+	*	CircanaPro.java
+	
+	*	/principales
+					- FrameCircanaPro.java
+					- PanelBotonera.java
+					- PanelEscritorio.java
+					- PanelEstado.java
+					- PanelVisor.java
+	
+	*	/administraciones
+					- FrameCaladero.java
+					- FrameEvaluacionStock.java
+					- FrameMedioTransporte.java
+					- FrameMercado.java
+					- FramePuntoDemanda.java
+	
+	*	/ayudas
+					- FrameAcerca.java
+					- FrameInternet.java
+	
+	*	/configuraciones
+					- ConfiguracionAC.java
+					- ConfiguracionAGR.java
+					- ConfiguracionAGT.java
+					- ConfiguracionEspacial.java
+					- ConfiguracionNeuronalBP.java
+					- ConfiguracionNeuronalRBF.java
+					- ConfiguracionRecurso.java
+	
+	*	/economia
+					- FrameEconomia.java
+					- PanelConfiguracionEconomia.java
+					- PanelEntrenarEconomia.java
+					- PanelGraficarEconomia.java
+					- PanelReporteEconomia.java
+					- RedNeuronalBP.java
+					- RedNeuronalRBF.java
+					- SubPanelConfiguracionBP.java
+					- SubPanelConfiguracionRBF.java
+					- SubPanelGraficarEconomia.java (Se recomienda usar InterfacePanel)
+	
+	*	/ecosistema
+					- Ajuste.java
+					- AutomataCelular.java
+					- Caladero.java
+					- Celda.java
+					- Conducta.java
+					- Coordenada.java
+					- Espacio.java
+					- Estadistica.java
+					- FrameEcosistema.java
+					- Grado.java
+					- Latitud.java
+					- Longitud.java
+					- Mapa.java
+					- OrigenDestino.java
+					- PanelConfiguracionEcosistema.java
+					- PanelEspacialEcosistema.java
+					- PanelReporteEcosistema.java
+					- PanelTemporalEcosistema.java
+					- Recurso.java
+					- SubPanelControlEcosistema.java
+					- SubPanelMapaEcosistema.java
+					- SubPanelTemporalEcosistema.java (Se recomienda usar InterfacePanel)
+					- SuperCamaronNailon.java
+					- SuperCrustaceo.java
+					- SuperIndividuo.java
+					- SuperLangostinoAmarillo.java
+					- SuperLangostinoColorado.java
+					- SuperMerluzaComun.java
+					- SuperPez.java
+					- Tiempo.java
+					- TipoAnimal.java
+					- TipoCaladero.java
+					- TipoCalidad.java
+					- TipoDieta.java
+					- TipoRecurso.java
+					- Vecindad.java
+					- VectorCaladero.java
+					- VectorCelda.java
+					- VectorOrigenDestino.java
+					- Vista.java
+	
+	*	/eventos
+					- EventoButton.java
+					- EventoComboBox.java
+					- EventoFrame.java
+					- EventoLink.java
+					- EventoList.java
+					- EventoMenuItem.java
+					- EventoMouse.java
+					- EventoRadioButton.java
+					- EventoRadioButtonMenuItem.java
+					- EventoTextField.java
+					- EventoTree.java
+	
+	*	/herramientas
+					- FrameConfiguracionServidor.java
+	
+	*	/integracion
+					- FrameIntegracion.java
+					- PanelGraficarIntegracion.java
+					- PanelPlanificarIntegracion.java
+					- PanelReporteIntegracion.java
+					- Resultado.java
+					- SubPanelGraficarIntegracion.java (Se recomienda usar InterfacePanel)
+					- VectorResultado.java
+	
+	*	/interfaces
+					- InterfaceAdministracion.java
+					- InterfaceConfiguracion.java
+					- InterfaceFrame.java
+					- InterfaceInternalFrame.java
+					- InterfaceMenu.java
+					- InterfacePanel.java
+					- InterfaceReporte.java
+	
+	*	/librerias
+					- ArchivoTextoPlano.java
+					- BaseDatoMotor.java
+					- BaseDatoTablaBasica.java
+					- CampoNumerico.java
+					- CargadorPaginas.java
+					- ColorFilaTabla.java
+					- DocumentoNumerico.java
+					- FormatoDecimal.java
+					- Impresora.java
+					- ModeloTabla.java
+					- ProcesoSegundoPlano.java
+					- Servicio.java
+					- TablaSwing.java
+					- TransformacionGrafica.java
+					- TransformacionModelo.java
+	
+	*	/menus
+					- MenuAdministracionDatos.java
+					- MenuAyuda.java
+					- MenuHerramientas.java
+					- MenuProyecto.java
+					- MenuVentana.java
+	
+	*	/operacion
+					- AlgoritmoGeneticoRuta.java
+					- AlgoritmoGeneticoTransporte.java
+					- ElementoLista.java
+					- ElementoRestriccion.java
+					- ElementoRuta.java
+					- FrameOperacion.java
+					- IndividuoRuta.java
+					- IndividuoTransporte.java
+					- PanelConfiguracionOperacion.java
+					- PanelEvolucionOperacion.java
+					- PanelReporteOperacion.java
+					- PanelTransportarOperacion.java
+					- SubPanelMedioOperacion.java
+					- SubPanelConfiguracionAGR.java
+					- SubPanelConfiguracionAGT.java
+					- SubPanelDemandaOperacion.java
+					- SubPanelGraficarEvolucion.java
+					- SubPanelMatrizCostos.java
+					- SubPanelMedioOperacion.java
+					- SubPanelOfertaOperacion.java
+					- SubPanelRestricciones.java
+					- VectorRestriccion.java
+					- VectorRuta.java
+	
+	*	/principales
+					- FrameCircanaPro.java
+					- PanelBotonera.java
+					- PanelEscritorio.java
+					- PanelEstado.java
+					- PanelVisor.java
+	
+	*	/proyecto
+					- FrameAbrirGuardarProyecto.java
+					- FrameProyecto.java
+					- PanelConfiguracionProyecto.java
+					- PanelOpcionalProyecto.java
+					- Proyecto.java
+
+=========================================================================================
+07/Marzo/2005:
+
+1.- Se mejora la validación de campos numéricos usando la clase CampoNumerico y
+    Servicio.contarCaracter() en los siguientes archivos. Con esto se validan los
+    tipos de datos y los rangos permitidos.
+    
+    * CampoNumerico.java
+    * FrameCaladero.java
+    * FrameEvaluacionStock.java
+    * FrameMedioTransporte.java
+    * FrameMercado.java
+    * FramePuntoDemanda.java
+    * PanelConfiguracionEcosistema.java
+    * SubPanelConfiguracionBP.java
+    * SubPanelConfiguracionRBF.java
+    * SubPanelConfiguracionAGT.java
+    * SubPanelConfiguracionAGR.java
+    * PanelPlanificarIntegracion.java
+    * FormatoDecimal.java
+
+2.- Se cambian el método guardarReporte() de la clase PanelReporteEconomia. Se saca
+    el +1 del día final. Así se evita la excepción.
+
+3.-	Se encontró rangos que no corresponden con las recomendaciones en
+    ConfiguracionNeuronalRBF.
+
+4.- Se cambió los valores de las constantes en la clase FrameInternet. Quedaron los
+    definitivos.
+
+5.-	Se ordena el reporte de la planificación de ventas por fecha de venta. Esto
+    trajo cambios en PanelReporteIntegracion.
+
+6.-	Se cambia la notación $US por US$ que es la correcta. Esto trajo cambios en:
+
+    * FrameMercado.java
+    * PanelReporteEconomia.java
+    * SubPanelGraficarEconomia.java
+    * PanelReporteIntegracion.java
+    * SubPanelGraficarIntegracion.java
+
+=========================================================================================
+PROBLEMAS QUE HAY QUE CORREGIR:
+
+*	El espacio infinito. ¿Cómo llevar a cabo esto?. La solución que se propone es
+	definir un espacio con una celda de más en los tres ejes. Esto para que los
+	super-individuos puedan moverse a esos lugares. Esto quizá implica de que el
+	mapa también aumente.
+
+*	Para las unidades de tiempo pequeñas y grandes, las velocidades se parecen
+	mucho. Por ejemplo: los super-individuos se mueven largas distancias en la
+	unidad de tiempo "Segundo". La corrección puede hacerse con pequeños dx, dy y
+	dz en cada super-individuo, que tengan los valores de las coordenadas reales
+	de ubicación del super-individuo.
+
+*	El movimiento demasiado rápido que está ocurriendo en los super-individuos.
+	Esto sucede porque una celda representa muchos metros en forma real. Y como los
+	recursos tienen una velocidad y/o percepción pequeña, entonces en la clase
+	Vecindad se tuvo que parchar con dos valores por defecto para la velocidad y
+	percepción. Estos valores son los que hacen ocurrir este problema. La solución
+	es incorporar las coordenadas reales (aparte de la celda) en cada
+	super-individuo para manejar la ubicación real.
+
+*	Falta activar la opción "Contenido" en Ayuda.
+
+*	Falta activar la opción "Ejemplos de IA" en Ayuda.
+
+=========================================================================================
+MEJORAS FUTURAS PREVISTAS:
+
+*	La incorporación del estado "Larva" en los super-individuos. Esto para modelar
+	aquellos super-individuos que no nacen siendo adultos inmediatamente y donde es
+	importante diferenciar el comportamiento de una larva y un adulto. Esta mejora
+	implica incorporar: el estado "Larva" al super-individuo y considear el tiempo
+	de eclosión de la larva para que esta se convierta en adulto.
+
+*	Para un tipo de vista, incorporar varias visualizaciones. Por ejemplo: en la
+	vista "Longitud-Latitud" permitir al usuario elegir la visualización:
+	"Profundidades", "Temperatura superficial", "Salinidad", etc. Esto debería
+	considerarse como una opción de configuración por parte del usuario.
+
+*	Incorporar una clase (que podría ser estática) para que maneje todos los
+	estilos, colores, fuentes y demás, relacionados con los estilos de los
+	formularios. Esto para seguir un estándar de formularios.
+
+*	Incorporar los factores de migración asociados a las tablas de la base de
+	datos: zona_pelagica, zona_bentonica, zona_region y zona_luz. Esto para
+	obtener un comportamiento más preciso de los super-individuos.
+
+*	Incorporar el factor de temperatura, salinidad y oxígeno disuelto en la
+	necesidad de migrar del super-individuo y en la obtención de la celda a migrar
+	del super-individuo.
+
+*	Incorporar el tipo de reproducción asexuada como una posibilidad de
+	reproducción en los super-individuos.
+
+*	Incorporar procesos de interacciones tróficas diferentes a la competencia. Por
+	ejemplo, la simbiosis, etc.
+
+*	Incorporar al modelo hidrodinámico: la distribución de tipos de suelo en el
+	mapa, el fenómeno ENOS, los principales factores oceanográficos como
+	temperatura, salinidad y oxígeno disuelto, las estacionalidades del año.

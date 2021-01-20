@@ -1,0 +1,1485 @@
+/***********************************************************************
+1 Jueves Abril
+- Se actualizo los archivos de proyectos y workspace para jcreator 2.5
+
+- Se agrego Archivo BaseDatoMotor.java
+
+- Se agrego archivos como PanelReporteEconomia,PanelEntrenarEconomia,
+	PanelGraficaEconomia, PanelHerramientaEconomia . java
+
+
+- Se modifico El archivo VisorArchivos, para agregar las funciones
+	del economico
+
+- Sugiere las siguientes Acotaciones:
+	- Todos los panel o opciones tienen que terminar con su
+	nombre de modelo, ( Por Ejemplo, "Reporte" -> "ReporteEconomia" y "ReporteEcosistema")
+	
+	- Las teclas unicas debe ser unicas para cada modelo solamante ( no en general )
+	
+	- Hay imagenes repetidas en Jtoolbar (por ejemplo Reporte)
+
+	- Se sugiere que se habiliten los metodos iniciar la pantalla principal de cada modelo
+		, porque cuando se borra no se puede volver a recuperar
+	- Se sugiere sacar los menu "Modelos"
+	
+
+ 
+/**************************
+
+/***************************************
+5 Lunes Abril
+
+- Se agregaron archivos RedNeuronalBP.java y RedNeuronalRBF.java
+- Se borraron archivos menu para los modelos
+- Se editaron los Visor de archivos para: que muestre configuracion en economia
+- Se cambio PanelHerramientaEconomia, PanelconfiguracionEconomia
+  es decir, se borro "PanelHerramientaEconomia", y se agrego "PanelconfiguracionEconomia"
+	
+- Se cambiaron archivos como FrameEconomia, 
+  PanelEntrenarEconomia,PanelGraficarEconomia,PanelReporteEconomia,PanelConfiguracionEconomia
+- Se agrega un Archivo llamado: "mysql-connector-java-3.0.11-stable-bin.jar"
+  El cual se copia en la carpeta "[JAVA_HOME]\jre\lib\ext" 
+
+  Se sugiere llegar a un estandar:
+  - En el modo de grafico, para la pantalla
+  - En el modo de manejar escuchadores
+  - En el modo de reporte
+  - En el modo de manejar las funciones para los frames
+/******************************************************************************
+
+/***************************************************************************************
+8 Jueves Abril
+
+(*) Muy Importante
+			: Se hicieron cambios profundos a todo relacionado con todo el modelo economico
+			para ajustarlo fielemente al metodo de programacion visto  y al estandar establecido 
+			en "Ecosistema" y la aplicacion en general 	
+
+- Se Modificaron los archivos de panel de economia ( son 4) para darle los eventos y darle la 
+  aparencia visual requerida
+
+- Se modificaron los archivos de RedNeuronalBP, RedNeuronalRBF
+
+- Se crearon los archivos ConfiguracionNeuronalBP, ConfiguracionNeuronalRBF
+	Se recomienda seguir el procedimiento para relacionarse con la base dato
+
+- Se creo Archivo : "EventoRadioButton" --> para habilitar los eventos de los radioBotones de la 
+	aplicacion
+
+- Se modifico el archivo "EventoBoton.java" para agregar los eventos de los botones de paneles
+	Se hace un alcance que se modifico lo siguiente:
+	- Nuevas variables de paneles y un frame
+	- 3 nuevos consturctores
+	- 4 funiones en actionPerformed
+
+- Se han implementado la mayoria de los eventos del frameEconomia
+
+- Se modifico el "FrameCircanaPro":
+	-En el constructor se llama el metodo nuevo
+	-El metodo nuevo llama a carga las configuracion pot defecto de las redes neuronales
+	-Se Aconseja a los demas integrantes seguir el mismo ejemplo para cargar sus configuraciones	
+
+
+/*******************************************************************************
+10 sabado Abril
+Se Creo un archivo llamado "Proyecto.java" el posee la informacion actualizada del proyecto que se esta 
+ejecutando en ese momento. Ademas tiene metodos que permite cargar ciertas configuraciones para los 
+proyectos en particular. Y por ultimo tiene constantes para decir el estado del proyecto
+********************************************************************************
+
+******************************************************************************** 	 		
+
+12 Lunes Abril
+ - Se corregio Ortografia en los comentarios en BaseDatoMotor
+ - Se corregio Ortografia en los comentarios y procedimientos en RedNeuronalRBF
+ - Se avanzo en RedNeuronalBP
+ - Se actualizaron ConfiguracionNeuronalBP y ConfiguracionNeuronalRBF
+ - Se Modifico archivos frameEconomia, panelEntrenar
+ 
+******************************************************************************** 	 		
+13 Martes Abril
+ - Se avanzo el PanelConfiguracionEconomia
+ - Se crearon archivos como SubPanelConfiguracionBP y SubPanelConfiguracionRBF
+ - Se actualizaron todos los panelesEconomia y frameEconomia
+
+******************************************************************************** 	 		
+14 Miercoles Abril
+ - Se Modifico el archivo "EventoBoton"
+ 	- Se se agrego un nuevo constructor para panelConfiguracion Economia
+ 	- Se los eventos a los botones de configuracion
+ - Se arreglaron comentarios en BaseDatoMotor, ConfiguracionNeuronalBP,
+ 	ConfiguracionNeuronalRBF,RedNeuronalBP,RedNeuronalBP	
+******************************************************************************* 
+15 Jueves Abril	 		
+ - Se Modifico PanelEntrenar,ConfiguracionNeuronalBP, ConfiguracionNeuronalRBF,
+ 	RedNeruonalBP,RedNeuronalRBF
+ - Se Modifico Proyecto para:
+ 	Pasar "guardarConfiguracion" -> "guardar"	(ConfiguracionREdNeuronal)
+ 	
+ - Se Modifico Frame Economia sin exito	
+*******************************************************************************  	
+22 Miercoles Abril
+ - Se modifico el Archivo PanelReporteEconomia
+ - Se modifico los arhivos de redes neuronales
+ - Se modifico FrameEconomia ( un poco mas decente)
+ - Se modifico panelEntrenarEconomia
+
+*******************************************************************************
+
+
+*******************************************************************************  	
+23 Viernes de Abril
+- Se modifico frameCircanaPro
+	- En el constructor de la clase, la llamada al metodo nuevo, se agrego al principio
+	en vez de al final, dado que primero se deben cargar los valores y despues 
+	los frames que ocupan estos valores
+	
+- Se modifico redNeuronalBP,redNeuronalRBF
+
+- Se modifico frameEconomia --> Esta mucho mas decenente
+
+- Se creo un archivo ProcesoSegundoPlano, para trabajar 
+	  con los proceso de segundo plano (conocidos como hilos)
+	  
+- Se borro el archivo llamado SwingWorker ( no es necesario ahora)  
+	
+******************************************************************************* 
+22 Sabado Abril
+ - Se modifico Frame Economia
+ - Se modifico subPanelConfiguracionBP,subPanelConfiguracionRBF, redNeruonalBP,
+ 	redNeruonalRBF, ConfiguracionNeuronalBP, ConfiguracionNeuronalRBF
+ 
+ - Se creo el archivo PanelGraficarEconomia, PanelEntrenarEconomia,PanelConfiguracionEconomia
+ - Se modifico PanelConfiguracionEconomia, PanelGraficarEconomia
+*******************************************************************************  
+
+*******************************************************************************  
+27 Martes Abril
+- Se Modifico los siguientes archivos:
+	- FrameEconomia
+	- PanelEntrenar
+	- PanelConfiguracion
+	- SubPanelConfiguracionRBF
+	- SubPanelConfiguracionBP
+	- ConfiguracionBP
+	- ConfiguracionRBF
+ 	- RedNeuronalBP
+	- RedNeuronalRBF
+		
+*******************************************************************************  	
+29 Jueves Abril
+ - Se probo una version en linux Mandrake 9.2, y se observaron los siguientes detalles:
+ 		- En sub Panel Control llama a imgenes con Mayuscula 
+ 		- No acepta el cambio de apariencia en para windows 
+ 									(modificado Frame CircanaPro) 
+ 		- (Tal vez al final de la etapa se volvera a revisar las acotaciones en linux)
+ 		
+ 
+ - Se modifico FrameCircanaPro
+ 	- Se agrego en el "cath" de cambio de apariencia un mensaje que dice 
+ 		que no se puede cambiar de apariencia
+ 		
+ - Se modifico:				
+ - Panel Entrenar
+ - Panel Configuracion
+ - ConfiguracionBP
+ - ConfiguracionRBF
+*******************************************************************************  
+*******************************************************************************  
+1 Sabado Mayo
+ - Se Modifico servicio:
+ 	-	La funcion "esNumero(String)" se mejoro con los comentarios y 
+ 		codigo inclusive
+ 	
+ - Se modifico los archivos:
+	- ConfiguracionNeuronalBP
+	- ConfiguracionNeuronalRBF	
+	- PanelConfiguracion
+	- SubPanelConfiguracionBP
+	- SubPanelConfiguracionRBF
+	- SubPanelGraficarEconomia
+	- FrameEconomia
+**************************************************************************
+3 Lunes Mayo
+	- Se modificaron todos los comentarios y otros de los elementos del 
+		modulo economia
+*******************************************************************************  		 	  
+*******************************************************************************
+*******************************************************************************
+Despues de 1 mes de sin programar he vuelto
+	ahora nadie me detendra ... Excepto yo, y una una mina muy rica y facil que 
+	aparezca
+*******************************************************************************	
+*******************************************************************************	
+*******************************************************************************  		 	  
+17 de Junio 
+	- Se modifico el archivo de Servicio, se agrego la funcion contarCaracter
+	
+	- Se agrego el archivo impresora, que 
+						sirve para imprimr reporte en texto plano
+	
+	- Se modifico Panel ReporteEconomico
+		- Importante: Se modifico para que se encuentre un solo formato de texto 
+		entre las distintas aparencias de la aplicacion. Esto es importante para
+		para que la impresion sea sin variancias emntre las aparencias
+			
+			Exigencias del JTextArea:
+				- Color de fondo blanco
+				- Texto de tipo  New_times_Roman de tomaño 15, Font.PLAIN
+				
+		
+	     Y Se arreglan imperfecciones de Panel Reporte
+	   
+	- Se modifico Red Neuronal RBF (implementando ajuste de intervalo) 
+	  
+	- Se modifico los subPaneles de configuracion, se modifico las configuracion de
+		la red
+	
+	- Se modifico la FrameEconomia	    
+	
+	- Se modifico Proyecto se le agrego la funcion "estaRepetidoNombre"
+	     		
+*******************************************************************************	
+20 de Junio 
+
+	- Se modificaron todos los archivos que afectan a los modulos de economia
+	
+	- Se creo el archivo FrameProyecto 
+	
+	- Se modifico el archivos de panelEscritorio, para agregar FrameProyecto
+	
+	- Se modifico el archivo EventroTree para agregarle el escuchador de proyecto
+	
+	- Panel visor de Archivos, para agregarle la obtencion de proyecto
+	
+	- FrameCircana para agregarle el metode visualizar (elegir) proyecto
+	
+	- Se modifico BaseDatoMotor para agregarle un mensaje de error
+		cuando se no conecte con la base datos. 
+		¿El IP del servidor debe	cambiable o no?
+	
+	- FrameAcerca ¿ Deberia ser inicializado una vez no mas , y depsues 
+		solo visualizarlo ?
+
+*******************************************************************************	
+
+*******************************************************************************	
+21 de Junio
+	- Se actualizo por completo el archivo de BaseDatoMotor, 
+		ahora no es una clase estatica, sino un objeto que se inicializa
+	
+	- Se actualizo los paneles para ponerlos dibujos	
+	
+	- Se finaliza el formato de reporte (se modifico el panel reporte)	
+	- Se modifico proyecto , se agregaron variaas funcines como:
+			- miembros y operaciones con las fechas
+			- miembros, operaciones y constantes con las observaciones	
+			- miebros y constantes de autor, organizacion, palabra clave	
+			
+	- Se modifico FrameProyecto (Problema con el cambio de color de fondo
+								cuando se cambia la aparencia)
+								
+	- Se creo PanelConfiguracionProyecto									
+	
+	- Se creo PanelObservacionProyecto 
+	
+	- Se creo EventoBoton para agregar escuchadores al boton de configuracion
+			- Se agrego constructor, y se agrego su senttencias en actioPerformed
+	
+	
+	- Por favor hacer transparencia a los siguientes imagenes:
+		- advertencia.gif
+		- aceptar.gif
+		- observacion.gif
+		- por_defecto.gif
+		- configuracion_proyecto.gif
+*******************************************************************************	
+
+*******************************************************************************	
+26 de junio
+	
+	- Se actualizo los siguinte archivos:
+			- Panel Configuracion Proyecto
+			- Panel Observacion Proyecto
+			- Frame Proyecto 
+			- Proyecto,	se agregaron funciones  y se ordeno
+*******************************************************************************	
+28 de junio
+
+	- Se modifico Red Neuronal RBF , Red Neuronal BP
+		(practicamante terminadas) , problemas al agregar algunos no vista 
+				al momento de programarla inicialmente 
+					
+	- Se modifico ConfiguracionRedNeuronalRBF, subPanelRedNeuroanlRBF			
+	
+	- Se modifico ConfiguracionBP, FrameEconomia 
+	
+	- Se creo BaseDatoTablaBasica 
+	
+	- Se modifico PanelEnternarEconomia
+	
+	- Se modifico Servicio, se agrego una fucino para desordenar un vector double
+	
+	- Se observa que en el panel de botonera dice:
+		-  "Nuevo Archivo" , "abrir Archivo", "guardar ... "
+		    no deberia ser "Proyecto" en vez de "Archivo"
+	
+	- Se monto la base Dato:
+		- Se llama circanapro
+		- Se agregaron atributos al modelo 
+		- Ver cosas de los campos de los modelos 	    
+	
+*******************************************************************************
+1 de Julio
+
+	- Se modifico ConfiguracionRBF, ConfiguracionBP
+	- Se modifico Proyecto.
+			- Se termino todos lo metodos que accedian a la base datos
+			- Se actualizaron y agregaron metodos:
+					- verficar si el nombre esta repetido
+					- cargar proyecto por nombre o por identificador
+					- guardar proyecto nuevo o actulizar proyecto existente
+					- guardarComo
+					- Se actualizo para acceder a la base datos
+			
+	- Se modifico BaseDatoMotorTablaBasica			
+	
+	- Se modifico FrameProyecto, ahora verficas las fechas de simulacion
+	
+	- Se modifico Servicio:
+			- Se Agrego la funcion esFechaValida
+			- Se Agrego la funcion compararFecha
+			- Se agrego el "import" Calendar
+			- Se agrego el "see" de Calendar, Integer 
+						
+					
+	Nota: ConfiguracionBP, ConfiguracionRBF, Proyecto funcionan con la base datos.
+			Falta probarla con la base datos.
+	
+	¿Los JDialog Tambien son frame?...
+		
+	- Se actualizaron o corrigieron comentarios de tipo  "@see", "autor", "fecha" y acentos:
+	 	- BaseDatoMotor
+	    - BaseDatoTablaBasica		
+	    - ConfiguracionBP
+	    - ConfiguracionRBF
+	    - EventoRadioButton
+	    - Proyecto 
+	    - Impresora
+	    - FrameEconomia
+	    - FrameProyecto
+	    - PanelEscritorio
+	    - Paneles y subPaneles de Economia
+	    - Paneles y subPaneles de Proyecto
+	    - ProcesoSegundoPlano
+	 	- Proyecto
+	 	- FrameAcerca
+	 	
+	 	Se observa los siguintes errores en comentario:
+	 		-  PanelControlEcosistema linea 33 Referencia EventoBoton
+	 		-  PanelEspacialEcosistema linea 22	"@autor" falta h
+	 		-  PanelReporteEcosistema linea 118 "bool"
+	 	
+	 	
+*******************************************************************************		 		
+****
+*******************************************************************************
+6 de julio
+	
+	- Se modifico proyecto
+	
+	Proyecto:
+		- En proyecto se cambio nuevo identifcador a 0 en vez de -1, 
+				por motivos de la base de datos
+		- Se actualizo para cargar configuraciones
+		- Se agrgaron funciones y otros 
+		
+	- En configuracion Espacial se cambio a cero para que funcionara el programa
+		Se aconseja usar la constante para no tener problema futuro
+		
+		
+	- Se modificaron script de base datos
+		- Se Modifico es script user, se agrego privilegios para que pueda acceder
+		  desde cualquier host
+		  
+		- Se modifico el script tablas para terminar con la tabla configuracion rbf
+		  
+		- Se modifico y el script datos , se agregaron los datos por defecto
+		    de Proyecto, Modelos, Configuracion, ConfiguracionBP, ConfiguracionRBF
+		    
+		    		
+		    		
+	- Se modifico PanelGraficarEconomia, FrameEconomia, ConfiguracionBP, 
+						PanelEntrenarEconomia,PanelConfiguracionEconomia,
+						PanelConfiguracionProyecto
+	
+	- Se modifico EventoBoton, 
+			Se dieron acciones a los botones adelante y atras de graficar
+		
+	- Se modifico "basedatomotor" 
+	
+	- Se modifico FrameCircanaPro
+		- Se agrego la funcion verificar la resulucion del monitor
+		- Se creo la configurara Cuadro de dialogos y se cambio a esa funcion al 
+		  cuadro de dialogos frameAcerca
+		- Se modifico un "showConfirmDialog" -->  "showMessageDialog" en aparencia 
+		- Para que funcione con la la actualizacion de proyecto (cargar)
+	
+	- Se modifico 
+	
+	- Se modifico FrameEconomia
+	
+	- Se modifico PanelEscritorio ,se agrego un metodo que carga la informacion 
+	  la informacion de las confdiguraciones en los frames (no probada)
+	
+	- Se pide hacer transparencia:
+		- Adelante.gif
+		- Atras.gif
+					
+	- Funcionando circanapro con MySql Windows y Linux
+		Version MySql Windows 5.0.0.a (alfa)
+		Version MySql Linux 4.0.0
+		
+*******************************************************************************		 
+Se Modifico PanelEscritorio
+	- Para que cargara un solo color trasero al panel, problermas con la aparencia GTK
+
+Se modifico EventoBoton Para agrelarlas eventos a los botones:
+	- Agregar 
+	- Quitar
+	- Refrescar 
+	- Todos pertencencientes al panel entrenar Economia
+	
+	- Se modifico BaseDato, BaseDatoTablaBasica, ConfiguracionBP,ConfiguracionRBF, 
+					PanelGraficarEconomia
+	
+	- Se modifico FrameCircanaPro y FrameEscritorio 
+			para corregir los acentos en algunos metodos
+	
+	- Se modifico PanelEntrenarEconomia, FrameEconomia
+	
+	- Se creo Tabla para contener a los datos que se quiere entrenar
+		Ideal crear un clase tabla que extienda JTable para que se puedan
+		manejar todos sus eventos correctamente
+		
+		problemas con la edicion de la tabla
+	
+	- Se pide hacer trasnparencia a las figuras:
+		- agregar.gif
+		- quitar.gif
+		- refrescar.gif
+		y si se olvido?:
+		- atras.gif
+		- adelante.gif
+*******************************************************************************		 		
+
+*******************************************************************************		 		
+7 de agosto
+  	
+	 Se Creo clase TablaSwing para manejar en forma facil una tabla de tipo Swing 
+	 	(es decir, graficamante)
+	 	Aunque la clase es bastante basica, se construyo pensando en una 
+	 	actualizacion para mejorarla y volverla mas eficiente
+	 	* No estan testeados todos lo metodos
+	 	
+	 Se Modifico los siguientes script de base datos:
+	 	- Tablas
+	 		- anio
+	 		- mes
+	 		- dato_economico
+	 	- Datos
+	 		- anio
+	 		- mes 
+	 		- dato_economico
+	 		- configuracion_bp  - Se actualizaron las cantidades de entradas y salidas
+	 		- configuracion_rbf - Se actualizaron las cantidades de entradas y salidas
+	 	
+	 	Sigue pensando en no cambiar las tablas, para no tener problemas
+	 		con datos en economia y no datos en operaciones 	
+	 
+	 Se modifico:
+	 	- panelEntrenarEconomia
+	 	- FrameEconomia
+	 	- Se modifico redBP, RedRBF
+	 	- EventoButton -
+	 		 Se cambios la funcion "refrecarTablaListaDsiponibles" por
+	 		 	"refrecarTablaAnosDsiponibles"
+	 		 en la seccion de eventos del panel entrenar economia
+	
+	Se modifico:
+		PanelEntrenarEconomia
+		PanelGraficarEconomia y su subPanel
+		FrameEconomia
+		RedBP, redRBF , ConfiguracionBP, ConfiguracionRBF
+			para actualizarlo a los acuerdos
+		
+		Se agrego un funcion a servicio
+			"obtenerMes" 	
+		
+		Primera Version de Economia	
+
+*******************************************************************************	 	 	
+21 de agosto
+ Se modifico PanelEscritorio
+ 	- Se comentaron para que sirven los metodos asociados para cargar informacion
+ 	   ( se explica por que hay 2 metodos en particular)
+ 	
+	- Se cambio el nombre del metodo "actualizarConfiguracion" --> "cargarConfiguracion"
+		por hecho hacerlo mas simbolico
+	
+	- Se cambio el nombre del metodo "cargarInformacion" --> 
+									 "actualizarInformacionProyecto
+	
+	
+ Se cambio EventoButton
+  	- Se cambio el metodo "establecerFechas" --> "establecerConfiguracion"
+  	
+	
+ Se cambio proyecto 
+ 	- Para los acuerdos
+ 	- Se ordenar algunso metodos
+ 	- Se corrigieron comentarios
+ 	- Y se agreagon algunos metodos
+ 
+ Se cambio Impresora
+ 	- Se agrego el caracter especial \t, es ahora aceptado ( pero tiene algunso problemas con el orden)
+ 
+ Se Cambio Servicio
+ 	- Se agrego el metodo obtenerMesDia	
+ 	
+ 
+ - Se Cambio FrameProyecto, FrameEconomia, PanelConfiguracionProyecto, PanelObservacionProyecto, 
+ 		PanelGraficarEconomia, SubPanelGraficarEconomia
+ 		PanelReporteEconomia,PanelEnternarEconomia.
+ 	
+ - Se modifico ConfiguracionBP,ConfiguracionRBF, PanelConfiguracionEconomia,
+ 	SubPanelConfiguracionBP,SubPanelConfiguracionRBF.
+ 
+ - Se corrigieron script (habian errores 2004-08-20 --> 2004-08-21)
+   - De Tablas Relacionadas con dato_economicos 
+   - De Datos con datos_economicos y configuracion_rbf y configuracion_bp
+   
+ 	
+ 	
+ Acotaciones:
+ 	- Las redes estan muy instables, 45 % de veces tiene una solucion correcta, Puede que
+	  sea por la poca cantidad de patrones que tienen.
+ 		- La redBP: A veces caen en minimos locales, lo cual deja un curva horizontal
+		- La redRBF: Esta muy inestable (todavia no comprendo porque), dice que se vuelve entrenar la red
+	- Las redes Estan prediciendo el mismo año que se entrena , en este caso 1990
+	- La impresora tiene problemas con el tab para imprimir, (no queda ordenado)
+	- Se arreglaron problemas cuando se queria modificar la informacion del proyecto.
+	- Se actualizaron casi las mayorias de los archivos a formato acordados (documentacion principalmente)	
+
+		
+*******************************************************************************	 	 	
+31 de agosto
+	Se Actualizo los Script de datos
+		- configuracion_rbf
+		- configuracion_bp
+	
+	Se modifico los siguientes clases:	
+		- FrameEconomia, para arreglar la actualizacion del reporte
+		- redNeuronalBP , para arreglar problemas cuando un solo patron por dimension
+		- redNeuronalRBF, para arreglar problemas cuando un solo patron por dimension
+		- ConfiguracionNeuronalBP
+		- ConfiguracionNeuronalRBF
+		- PanelReporteEconomia
+		- PanelEntrenarEconomia
+		- PanelConfiguracionEconomia
+		- PanelGraficarEconomia
+		- SubPanelConfiguracionBP
+		- SubPanelConfiguracionRBF
+		- SubPanelGraficarEconomia
+		
+		
+	
+	Se modifico para acuerdos de documentacion:
+		- EventoRadioButton
+		- TablaSwing
+		- Servcio
+			 Error en la documentacion de la funcion de obtenerDia. 
+				error del formato del arreglo.
+				
+	
+	- Se agrego la imagen:
+		- entrenar.gif
+		
+	- Se pide OTRA VEZ hacer trasnparencia a las figuras:
+		- agregar.gif
+		- quitar.gif
+		- refrescar.gif
+		- atras.gif
+		- adelante.gif					
+		
+	Acotaciones:
+	- Al ejecutar siempre el error "Error al inicializar el 'doble-buffer'." , 
+		es mi pc no mas o no?
+	- En la documentacion: @param y @return estan separado por salto de linea		
+	- Se suguiere poner en la version "Circana Pro 2.0" no uno "1.0"
+
+************************************************************************************
+2 Septiemebre
+
+ - Se modifico eventoTree:
+ 	- Para agregarle eventos a los elementos de ejecucion y operacion,
+
+ - Se modifico archivos
+ 	- SubPanelGraficarEconomia
+ 	- redNeuronalBP
+	- redNeuronalRBF
+	- ConfiguracionNeuronalBP
+	- ConfiguracionNeuronalRBF
+
+ - Se modifico en documentacion
+ 	- BaseDatoTablaBasica
+   	- Proyecto
+
+************************************************************************************
+** Sin Revisar  PAra el tito ******************
+************************************************************************************
+11 de Septiemebre	
+	- Se Modifico
+		-FrameEconomia
+		-PanelReporteEconomia
+		-PanelEntrenarEconomia
+		-PanelConfiguracionEconomia
+		-PanelConfiguracionProyecto
+		-PanelGraficarEconomia
+		-Impresora
+		-SubPanelConfiguracionBP 
+		-SubPanelGraficarEconomia 
+		-ConfiguracionNeuronalBP
+		-ConfiguracionNeuronalRBF
+		-RedNeuronalRBF
+		
+		-PanelEscritorio, se soluciono el problema cuando estaba minimizado
+			los distintos framesInterno, por esto en cada metodo elegirXXXX
+			se puso como el siguiente ejemplo 
+			- Se modifico cada proceos elegirXXXX
+				Ej.
+					frameEcosistema.setSelected(true);
+					frameEcosistema.setMaximum(true);
+					
+		
+		-En los constructores de cada Frame, se puso falso en closed, 
+			para que no pueda ser cerrado ( no influye mucho ya que son 5 frames)
+		-En menuVentena se cambio la forma de como se ordenan en la pantalla
+			a las aparencia, ya que la incia por defecto es L&F de metal
+		-En EventoMenuRadioButton se reparo las llamadas a las aparencias, habia
+			un error al llamarlas (estaba desordenado)	
+		-En eventoFrame se adapto como se estan trabajnado todas las clases,
+			es decir, se le pasa el frame que participa en el constructor y
+			despues se detecta en frame ocurrio la accion. En pocas palabras
+			funciona ahora igual que evento button, y otros.
+		-FrameCircanaPro se actualizo para que trabaje con la actualizacion
+		 de eventoFrame.
+		 
+		-ProcesoSegundoPlano 
+			- Se cambio documentacion de algunas variables constanes
+			- Se agrego constante de NO_EJECUTANDOSE
+			- Se modifico un meotodo que indica si est ejecutando o no
+			- Se modifico es metodo dormir
+		 
+		 		
+		
+	
+		
+	- Se modifico Script de Datos	
+		- Configuracion RBF 
+		- Configuracion BP
+		- Anios Se agregaron 5 años mas ( 1985 hasta 1989)
+	
+			
+	- Trabajando de en los modelos
+		- Dudas como se hace con el digrama de clase
+			- Hay un unico digrama de clase ( 92 clases)?
+			- Si es en particular por modelo como saber que clase incluir?
+			- Clase graficas(SWING) son necesarias modelarlas , 
+				El diagrama jerarquico es tambien moutroso
+			- EL de Objeto como se modela
+				
+	
+						
+			
+			
+	Observacion: 
+		- Se podrian levar todos los menus de la clase FrameCircanaPro en una
+		  clase menu. 
+		
+			
+		
+***********************************************************************************
+***********************************************************************************
+17 de Septiembre
+	Se avanzo fuertemente en el menu ventana. para lograr este objetivo se modificaron
+	los siguientes archivos.
+	
+	En frame Internal se hicieron los siguientes cambios
+		- Se sacaron las contantes que margenX y Y ( no sirven)
+		- Se modifico el contructor para tome el valor del panel escritorio y
+		  tome el tamaño del panel escritorio "setSize(panelEscritorio.getSize());"
+		- Se modifico el metodo configurar frame , ya no es necesario
+		 	pasar panel escritorio, y configurar su tamaño y posicion 
+
+		
+	Se modifico el archivo Panel escritorio	
+		- Se agrego el metodo posicionar frames.
+		- Se agrego el metodo`privado elegirFrame(JInternalFrame frame) 
+		  para ordenan el codigo fuentes
+		- Se quito las llamadas a los frames para que se hagan visibles 
+		  (era forma de ordenarlo), al iniciar el panel escritorio
+		- Se agrego el metodo minimizarFrames, para minimizar todos los frames 
+			OJO : todavia no esta funcionando ( no se como hacerlo)
+		- Se reparo el Bug que habia frame por uno mismo el frameInnternal
+			para ello se cambio la funciones elegirXXX	
+	
+	Se modifico el archivo FrameCircana
+		- Se agrego el metodo posicionar frames. que llama al metodo de panel escritorio
+		- Se agrego el metodo minimizarFrames, para minimizar todos los frames 
+			OJO : todavia no esta funcionando ( no se como hacerlo)
+		- Se modifico el metodo de aparencia para que cada cuadro de dialogo
+		  se actualize segun aparencia
+		
+	Se modifico el menuVentana
+		- Se quitaron los elementos y metodos de cerrar ventanas.
+		- Se agrego el elemento y metodo que miminizar todas las ventanas.
+	
+	Se modifico el eventoMenuItem
+		- Se le dieron eventos los siguientes eventos:
+			- Evento cascada
+			- Evento mosaico Horizontal
+			- Evento mosaico Vertical
+			- Evento minimizar Ventanas
+			
+	Se modificaron los nombres de las siguientes imagenes:
+		- agregar.gif
+		- quitar.gif
+		- refrescar_basedato.gif
+		- atras.gif
+		- adelante.gif					
+		para que funciones en linux (las extensiones estaban con mayuscula)
+	
+	Se aconseja em ModuloOperacion
+		- crecer los botones de aceptar	del transporte (crecer y subir un poco)
+		- crecer el boton establecer configuracion del panle configuracion	
+***********************************************************************************	
+
+20 de Septimebre
+	Se modifico los siguientes archivos
+		- Paneles y subPaneles de Economia
+		- ConfiguracionNeuronalBP
+		- ConfiguracionNeuronalRBF
+		- RedNeuronalBP
+		- RedNeuronalRBF
+		- FrameProyecto
+		- FrameCircanaPro
+		- BaseDatoMotor
+		
+		* En las clases ConfiguracionNeuronalBP y ConfiguracionNeuronalRBF
+			se agrego un metodo "agregar" para llamar cuando un proyecto es nuevo
+				o se quiere cambiar el nombre
+	
+	
+	Se modifico el eventoMenuItem
+		- Se cambio la llamada a del proceso salir al menuProyecto, para agregarle
+			frameCircana.cerrar();	
+	
+	Se modifico EventoFrame:
+		- Ahora no se cierra automaticamente ( primero hay un cuadro de dialogo)	
+			frame.cerrar()
+			
+	Se modifico EventoButton
+		- Se modifico la llamada a un metodo del panelConfiguracionProyecto
+			"establecerSimulacion" ---> " establecerConfiguracion"		
+			
+	Se modifico FrameCircanaPro
+		- Se modifico el metodo cerrar (para habilitar el cuadro de dialogo de cerrar)	
+		- Se modifico el metodo configurar frame para agregar que no se cierre automaticamente
+				setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+		- Se modifico el metodo guardarComo , se agrego la llamada al metodo
+			" Proyecto.guardarComo "
+		- Se modifico el metodo abrir, 
+		
+	
+	Se modifico Proyecto
+		- se modificaron los metodos guardar() y guardarComo() por errores detectados
+	
+	Se modifico los script de tabla y datos
+		- En tabla se agrego un campo a la tabla configuracion_rbf
+				habilitar_centroides_dinamicos_configuracion_rbf 
+				como TNYINT ( los parecido a un boleano que encontre)
+
+		- Se Datos se modifico el script de datos de:
+			- configuracion_rbF
+			- configuracion_bp
+		
+**********************************************************************************
+10 de octubre
+	Se modifico Proyecto
+			- Se cambio el metodo "guardarComo()"
+				Se if (que compara nuevo Proyecto) con -1, se cambio por la instruccion
+					// Si el proyecto es nuevo se agrega
+					if(codigo == Proyecto.NUEVO_IDENTIFICADOR)
+				
+			- Se cambio el metodo "obtenerTodosProyectos" 
+						para que no muestre el proyecto nuevo
+			
+			- Se cambio el Metodo buscarCodigoProyecto(String nombre)
+				Para darle codigo = Proyecto.nuevo_identificador y
+				asegurarse cuadno la consulta es vacia no tire el error
+				mostrar "error al buscar codigo Proyecto"
+			
+	
+	Se modifico FrameAbrirGuardarProyecto
+		- Para que no tire error cuando no haya proyecto que mostrar
+			
+						
+	Se modifico :
+		- ConfiguracionNeuronalRBF
+		- ConfiguracionNeuronalBP
+		- PrcesoSegundoPlano (por errores incluidos por el integrante Patricio Merino)
+			(en los constructores)
+		- RedNeuronalRBF
+			
+	
+	Acotacion:
+	-	En eventoButton , asociado a la parte de cargarProyecto , se recomienda
+		utilizarlo en la clase correspondiente y no quedar el codigo en el eventoButton
+		( ya que el codigo va a seguir creciendo a medida que se necesite, por ejemplo
+		  falta llamar a panel escritorio para cargarCodnifuracion y 
+		  	actualizarInformacionProyecto) 
+	
+	- 	En clase servicio, las funciones en que pasa el arreglo 
+		no es necesario pasar su tamaño, ya que a un arreglo se se pregunta por un valor
+		publico que dice "arreglo.length" ( no es metodo sino un dato miembro del arreglo)
+	
+	- 	En todos los panles de configuracion de configuracion cuando se 
+		cambia o se vuelve una configuracion por defecto llamar al metodo
+		Proyecto.establecerModificado(true)
+	
+	-	FrameOperacion falta comandos para que no sea closeable
+			
+**********************************************************************************
+11 de octubre
+	- Se cambio 
+		- Paneles y Subpanels de Economia
+		- FrameEconomia
+		- Paneles y frame de Proyecto
+		- Panel Escritorio
+			- El constructor (se paso el frameCircanaPro) 
+			- La declaracion de las variables ahora son publicas
+		- FrameCircana
+			- La declaracion de las variables ahora son publicas
+		- FrameOperacion
+			- Se cambio la segunda opcion (para que no sea closable)
+		- PanelEstado
+			- Se agregaron dos metodos para manejar la imagen de ocupado del sistema.
+				ocupado y desocupado
+			- Se agregorn ToolTips (para las barras y etiqueta de progreso)	
+			
+		
+		Acotacion:
+		- Falta en Servicio.java adoptar el metodo "obtenerMaximoIndice" sin tamanio
+**********************************************************************************	
+17 de ocutbre 
+
+	- FrameEconomia , Paneles  y subPanales de Economia
+	- FrameProyecto , Paneles de Proyecto
+
+ Se cambio:
+	-	EventoButton
+		Ya no es necesario los siguientes metodos en frameEconomia
+		
+		Se cambio la llamada al metodo "refrescarTablaAnosDisponible()"
+			 if (boton == panelEntrenarEconomia.obtenerBotonRefrescar())
+				frameEconomia.panelEntrenarEconomia.refrescarTablaAnosDisponible();
+		
+		Se cambio la llamada al metodo "imprimir()"
+				
+
+	
+	- TablaSwing
+		- Se agrego un metodo que se llama "obtenerTodasFilas"
+		* Observacion: Se observa que el metodo buscar fila puede estar malo
+		
+	- PanelEstado 
+		- Se modifico los siguientes metodos:
+			- cambiarBarraEconomia
+				- Se agrego un tooltips("con el valor del progreso")
+			- cambiarBarraEcosistema
+				- Se agrego un tooltips("con el valor del progreso")
+			- cambiarBarraOperativa
+				- Se agrego un tooltips("con el valor del progreso")
+		
+		- Se modifico el constructor del Panel para asignar los toolstips adecuado
+
+	- FrameAcerca
+		- Se cambio el constructor , para que ya no se a un boton la imagen.
+			ahora es JLabel (no se puede pulsar)				
+			
+	- FrameCircanaPro
+		- Se quitaron los metodos posicionarFrames, minimizarFrames,
+	
+	- EventoMenuItem
+		- Se los elementos de menu ventana, ahora  se llama
+		  de la siguiente manera. 
+		  	framecircana.panelEscritorio. Metodo
+	
+	- EventoButton 
+		- Se modificaron muchos metodos y agregaron otros, para quitar 
+		las llamadas a los metodos rebudantes de frame circana Pro (ahora se agrego la
+		llamada al panelEscritotorio) , recomendado re-emplazar el archivo
+		- Incluso se modificaron las llamdas con respecto al frame ecosistema.	
+		
+	- PanelEscritorio
+		- Se agregaron llamadas al frameProyecto y sus paneles		 
+	
+	- FrameCircanaPro
+		- Se quitaron alrededor de 12 metodos (todos metodos rebudantes),
+			 recomendado re-emplazar el archivo
+	
+	- PanelBotonera
+		- Agreagon nuevos items y para el frame Proyecto, 
+			(incluye todoso los metodos	relacionados con estos) 
+			
+	- EventoTree
+		- Se modificaron muchos metodos y agregaron otros, para quitar 
+			las llamadas a los metodos rebudantes de frame circana Pro (ahora se agrego la
+			llamada al panelEscritotorio) , recomendado re-emplazar el archivo
+		  	
+	
+	- Acotacion :
+		-	Si las tablas  de region, recurso, empresa empieza desde cero
+			hay modificar los siguientes metodos
+		
+		PanelConfiguracionProyecto
+			- ObtenerCodigoEmpresa
+			- ObtenerCodigoRegion
+			- ObtenerCodigoRecurso
+			(quitarlela la suma de 1)
+			- cargarConfiguracion
+			(quitarlela la resta de 1)	
+		
+		- En servicio , hay dato miembtro que se llama "menos_infinito", se consdisdera
+			rebudante porque hay metodo un metodo estatico que esta java.lang 
+			(por defecto de java) se llama "Double.isInfinito(double x);" 	 
+			
+			Ademas en el obejto Double Hay una constante double public que se llama 
+			NEGATIVE_INFINITY,POSITIVE_INFINITY y NaN
+		
+		- Se recoemienda quitar los metodos rebudantoes obtener___ un obejto publico
+			que antes se usaba cuando eran privados.
+		
+		- FrameAbrirProyecto, se cae (tira error) cuando ingreso una "'", no hace nada
+			Se recomienda llamar al metodo estatico esValidoDatoIngresado(String)
+			que verifica si un dato es valido o no.
+			
+		
+				  	
+**********************************************************************************
+20 de octubre 
+	
+	Se cambiaron
+		- FrameProyecto y sus Paneles
+		- FrameIntegracion, sus Paneles y subPaneles 
+		- FrameEcononomia , sus panales y subPaneles 
+		- RedNeuronalBP
+		- RedNeuronalRBF
+	
+		
+	Se modificaron los siguientes archivos:
+		
+		- EventoTree 
+			- (Todo relacionado con configuracionIntegracion --> 
+						PlanificacionIntegracion)	
+		
+		- EventoButton 
+			- (Todo relacionado con configuracionIntegracion --> 
+						PlanificacionIntegracion)	
+			
+			- Se agregaron las llamadas a los botones de Integracion		
+			- Se sacaron las siguientes variables de:
+				FrameEconomia, FrameIntegracion , FrameProyecto
+			- Se modificacron todos los constructores con respecto a los
+			  frames sacados, son 8 aprox.
+			- Se cambiaron los actionesPerformed asociodos a los frames 
+				mencionados.
+			  	
+		
+		- PanelVisor
+			- Se agrego un metodo "cargarConfiguracion"
+			- Se modifico el constructor ( por el tema de frameIntegracion)
+			- (Todo relacionado con configuracionIntegracion --> 
+						PlanificacionIntegracion)	
+		
+		- PanelEscritorio
+			- Se modifico el metodo "cargarConfiguracion" se agrego la llamada
+				al panelVisor
+			- Se modifico el metodo "actualizarInformacionProyecto" se agrego la llamada
+				al frameIntegracion
+				
+			- (Todo relacionado con configuracionIntegracion --> 
+						PlanificacionIntegracion)	
+			 			
+		- PanelBotonera
+			- Se agrego 2 botones Planificacion y reporte integracion
+			- Se modifico el contructor
+			- Se agregaron 2 metodos obtener (para cada uno de ellos).
+		
+		
+						
+	- Se elimino el archivo PanelConfiguracionIntegracion.java 
+	
+	- Se agrego el archivo PanelPlanificacionIntegracion.java 
+	- Se agrego el archivo SubPanelPlanificacionIntegracion.java
+	
+	se agregaron 3 imagenes:
+		- reporte_integracion
+		- planificacion_integracion
+		- graficar_integracion
+		- ejecutar_planficacion
+		 (por favor hacerle transparencia a esas imagenes)
+	
+	- DocumentoNumerico, 
+		se modifico para aceptar numeros negativos.
+		
+	
+	Se modificaron script de tablas y datos
+	
+	- Se modificaron script de tablas:	
+	
+		- La actualizacion en tabla proyecto no funciona, tiene que ser por obligatoriamente
+		auto Increment (no se modifico)
+		- Se agrego una tabla tipo_red_neuronal
+		- Se modifico la tabla dato_economico_resultado
+
+
+	- Se modificaron script de datos:	
+		- Se agrego 2 insert de la tabla tipo_red_neuronal
+	
+	
+	Acotacion :
+		- Se recomienda en recurso agregar una constante que maneje si el recurso
+		Predicible o no. ( Es usado en panel configuracion Proyecto)
+		
+		- La clase CampoNumerico no acepta numero negativo.
+		- La clase Documento Numerico, esta mal diseñado (error de codigo)
+			Modificado
+		
+		
+		Ej.
+			PREDECIBLE = 0
+			NO_PREDECIBLE = 1
+		
+		- Se recomienda	en el frameEcosistema quitar el nombre del proyecto
+		   ya que el nombre esta siempre visible en el panel Visor, es rebudante
+		   no hay 2 frames ecosistemas al mismo tiempo como diferenciarlos con el 
+		   nombre 
+**********************************************************************************
+21 de Octubre
+	
+	Script:
+		- Se cambio el script usuario.sql --> para que se acceda de otros pc
+
+		- Falta en el script tabla
+			la modificacion dato_economico_resultado 
+	
+	Acotacion:
+		- Se recomienda sacar las tablas de dato_XXXX 
+			ya que realmente no hacen nada (estorban y estorban)
+		- Un problema serio:
+			* Cuando se genera un resultado por cualquier modelo se tiene que guardar en 
+				un proyecto ( pero si no sea ha guardado proyecto) donde se guarda.
+				2 soluciones:
+					- Grabar obligatoriamente un proyecto
+					- grabarlo en el nuevo en forma temporal y despues traspasarlo
+					   al proyecto real (esta solucion necesita mas codigo 
+					                     de programacion)
+					   
+			
+	 	
+ 	- FrameEconomia, sus Panales y subPaneles
+ 	- FrameIntegracion sus Panales y subPaneles
+ 	
+ 	- EventoButton
+ 		- Eventos relacionado con PanelGraficar, es decir, los eventos relacionados
+ 		  con estos. 
+ 		
+ 	
+ 	- PanelVisor
+ 		- CargarConfiguracion, se agrego una llamada al metodo
+ 		  repaint para que se actualize el nombre del proyecto.	
+ 		
+ 	- Servicio
+ 		- ContarCaracter, se cambio con el fin que pudiera contar cualquiern tipo
+ 		  de caracter ( Verfiicar que esta funiocn no este Definida en java.lang.String) 	
+ 	
+ 	- BaseDatoMotor	
+ 		- esValidoDatoIngresado(nombre) , pooseia algunos problemas de programacion,
+ 		 ahora esta verificado el metodo
+ 	
+ 	- FrameCircanaPro
+ 		-  guardarProyecto, se agrego las llamadas al metodo de baseDatoMotor
+ 		   para verificar que el nombre del proyecto sea valido
+ 				
+ 		
+	se agregaron 3 imagenes:
+		- reporte_integracion
+		- planificacion_integracion
+		- graficar_integracion
+		- ejecutar_planficacion
+		 (por favor hacerle transparencia a esas imagenes)
+
+ 	- Se eliminaron las siguientes imagenes:
+ 		- adelante.gif
+ 		- atras.gif	
+**********************************************************************************
+28 de octubre
+	
+	Se crearon los siguientes archivos:
+		- ArchivoTextoPlano
+		- FrameConfigurarServidor
+		- ConfigurarServidor
+	
+	Se Creo la siguiente carpeta:
+		- Conf
+			- que tiene el archivo configurar_servidor.cir
+	
+	
+	
+Se modificaron los siguientes archivos
+	
+	- FrameProyecto y sus Paneles
+	- FrameIntegracion, sus Paneles y subPaneles
+	- FrameEconomia , Paneles y subPaneles
+		
+	- FrameCircanoPro
+		- FrameConfigurarServidor
+		- nuevo()
+		- configurarServidor()
+		- aparencia
+		- actualizarCuadros de Dialogos
+	
+	- BaseDatoMotor	
+		- contructor()
+		- se agregaron 2 metodos
+
+	- MenuHerramienta
+		- Se agrego un item
+	
+	- EventoFrame
+		- Nuevo constructor y opcion
+	
+	- EventoButton
+		- Nuevo constructor y opcion		
+		- Se le dieron Acciones al boton graficarIntegracion perteneciente al 
+			panelBotonera
+	
+	- EventoMenuItem
+		- Nuevo constructor y opcion	
+			
+	- FrameAcerca
+		- shortkey aceptar			
+	
+	- Proyecto
+		- Guarda fechas y otras mejoras (que no me acuerdo)
+	
+		
+	- TablaSwing
+		- Documentacion	
+	
+	- EventoButton
+		-
+	- BaseDatoTablaBasica
+		- Se agregaron 2 metodos , para borrar ( uno se llama "borrar", y 
+												"borrarCondicion")
+	
+	- Proyecto
+		- Se agrego un metodo que se llama inicializarFechasSimulacion 
+			con parametros ( ahora la fecha de simulacion se puede guardar 
+			en el proyecto)
+		- Se modificaron los metodos guardar, guardarComo, cargar para incluirles las
+			de simulacion		
+		- esNuevo()	
+		
+	- CampoNumerico
+		- Se quito una variable miembro, toolkit
+		- Se modifico el metodo constructor (Se quito toolkit)
+		- Se modifico el metodo getValue (Se quito toolkit, 
+				pero uso uno que se instancia ahi mismo)	
+	
+	Se agrego las siguientes imagenes
+		- configurar_servidor.gif (por favor hacer transparencia)		
+	
+	Se cambiaron los scritps:
+		El de tabla:
+			Proyecto tiene 2 campos de mas fecha_inicial, fecha_final del tipo date
+		
+		El de datos
+			El insert de tipo_red_neuronal (son 2)
+	
+	Acotacion:
+	
+	- Se recomienda en recurso agregar una constante que maneje si el recurso
+		Predicible o no. ( Es usado en panel configuracion Proyecto)
+		
+		PREDECIBLE = 0
+		NO_PREDECIBLE = 1
+	
+		- Se utiliza en economia	
+	
+	- Se recomienda sacar las tablas de dato_XXXX 
+		ya que realmente no hacen nada (estorban y estorban)
+	
+	(por favor hacerle transparencia a esas imagenes)	
+		- reporte_integracion
+		- planificacion_integracion
+		- graficar_integracion
+		- ejecutar_planficacion
+		- probar_conexion
+		- establecer_conexion
+				
+**********************************************************************************
+
+7 de noviembre
+
+Se cambiaron los siguientes archivos:
+	- CircanaPro
+		- Se agrego la configurar la base dato en caso de no iniciar la base de datos
+		
+	- FrameConfigurar
+		- Se agrego las opciones de instalar la base datos
+		
+	- EventoBoton
+		- Se agregaron acciones para los botones instalar base dato e guardarResultado
+		  base datos
+		
+	- Proyecto
+		- Se agregaron funciones de limpiar resultados , y cambiar resulatados
+		  (*) importanes se dejaron funciones hbilitadas para que cada programador
+		      haga el insert correspondiente a su resultado. Las otras lineas
+		      estan listas (quitarles el comentario)  
+ 
+	- BaseDatoMotor
+		- Se agregaron funcione para ejecutar script de base datos. y la posibilidad
+		  de cargar configuracion desde archivos. 
+	
+	
+	- FrameAbrirProyecto
+		- Se cambio el constructor para acciones y tooltips a los botones de abrir, 
+				guardar y cerrar
+	
+	- FrameEconomia y sus paneles
+	
+	- Panel Configuracion Proyecto
+		- Para preguntar si quiere cambiar resultados realmente.		
+	
+	- FrameCircanaPro
+		- El metodo de apariencia
+		
+		
+	Por favor hacerles las transparencias a las imagenes	
+	
+Se agrego una imagen instalar_base_dato.gif
+	
+En la carpeta 'base' se agrega los archivos de base datos.
+	
+
+Acotacion:
+	- Es necesario crear 4 archivos del tipo_recurso, tipo_dieta, etc...
+	  	Podr ian agregarse esas constantes en la clase recurso 
+	  	(el objetivo resumir archivos)
+	  	
+	- Dudas:
+		- Ver el caso:
+			- Genero un resultado para el camaron nailon, despues cambio a langostino
+			  y guardo, los resultados se agregan al proyecto grabado?
+
+			- Genero un resultado con una configuracion y despues la cambio y guardo
+			, los resultados se agregan al proyecto grabado?
+			
+			- Genero un resultado con una configuracion y despues la cambio, 
+				el resultado se borra?
+				
+**********************************************************************************
+12 de noviembre
+
+	Se Modificaron los siguientes archivos:
+		- CircanaPro
+		- PanelPlanficacionIntegracion
+		- PanelReporteIntegracion
+		- EventoButton
+			- Para darle accion al boton guardar base dato del panel integracion
+			
+	
+	Se modifico el script de tablas:
+		- Se agrego la creacion de la tabla reporte_integracion.
+			
+	
+	-Acotacion:
+		* Usar los mismo nombres para cambiar las configuraciones.
+		* Usar las mismas imagenes para graficar los botones 
+			(Ej. Boton guardar resultados)
+			
+
+**********************************************************************************	
+
+17 de noviembre	
+
+ Se modifico:
+ 	- PanelConfiguracionEconomia
+ 	- FrameEconomia
+ 	- EventoButton
+ 	 	- Relacionado con los eventos de configuracion economia.
+ 	 	
+ 	
+
+ Acotacion:
+ 	- PanelGraficarEconomia, quitarle el break- Point
+ 	- En la clase proyecto se pide llegar a un acuerdo sobre 
+ 	   limpiar tablas ( con un string o con entero dque identifique el modelo
+ 	   
+**********************************************************************************	
+30 de noviembre
+	
+ Se modifico y revisaron los siguientes archivos:	
+ 	- SubPanelGraficarIntegracion
+	- CircanaPro
+	- BaseDatoMotor
+	- BaseDatoTablaBasica
+	- ConfiguracionNeuronalBP
+	- ConfiguracionNeuronalRBF
+	- ProcesoSegundoPlano 
+	- ArchivoTextoPlano
+	- FrameConfiguradorServidor
+	- ConfiguradorServidor
+	- ColorFila 
+		- Habia una variable que se inicializaba en la clase ahora se cambio
+		  al constructor
+	- FrameEconomia y sus Paneles, subPaneles
+	- FrameIntegracion 
+	- PanelPlanificacionIntegracion
+		- Se cambio profudamente para que se ordenaran los texto de modelos
+	- PanelReporteIntegracion
+	- PanelGraficar y subGraficar Integracion
+		
+	
+	- PanelEscritorio 
+		* El metodo que se escribia actualizar informacion proyecto se puede 
+		  cambiar por el metodo cargarConfiguracion, ya que cuando un proyecto 
+		  cambia se borra todos los posibles datos generados por los proyectos
+		   ( las configuracion deben quedar.)	 		
+
+ Se modifico insert de datos:
+ 	- dato_economico_real
+
+ Acotacion:
+ 
+ 	
+ 	
+ 	- El formato establecido se puede usar con punto en vez de coma
+ 	
+ 	
+	- Problemas observados en el modelo de economia, ( en su conceptos )
+		- Los productos se venden en diferentes tipos de tallas Ej. 100 / 200 , 200 / 300
+		   Ahora hay una sola que es generica, representativa de la 100 / 200 
+							(segun su talla cambia el precio)
+
+		- Existen varias demandas ( por lo menos 2 demanda) segun los paises, en esa ocasion
+		  no se modelo por la falta de informacion, ahora se intentara modelarla segun un pais
+   	    		especifico.			
+	
+		
+		Solucion planteada y posible acotacion para un futuro:
+			- Tomar la talla 100 / 200 ( es la que mas datos se conocen)
+			- Tomar el cliente de Dinamarca ( es la que mas datos se obtienen)
+				Raramente hay de datos de envios a china (china no se ve
+				nada en los consumidores de chile), y nada correspondiente 
+					alemania
+			- Documento ultilizado es de la fecha 2003 y como voy a predicir si 
+				los datos son tan antiguos		
+			- Imprimir en el menu proyecto no sirve	
+			 		
+				
+**********************************************************************************
+6 de diciembre
+
+Acotacion:
+	- PanelEstado, hay constante no publica
+	
+	- PanelVisor, no se cambia el nombre del proyecto
+	- PanelEscritorio
+		- Se modificio el metodo cargarConfiguracion
+	
+	- FrameCircanaPro
+		- Se creo un metodo cargarConfiguracion
+		- Hay problemas cuando se quiere habilitar el boton de FrameCircanaPro
+	
+	- EventoRadiobutton, constructor del panelEntrenarEconomia 
+	
+	- Servicio, 
+		- Se cambio formatearNumero para pasar de coma a punto,
+			esto sirve para mejorar el incremento raro.
+			Para eso se agrega:
+				- import Locale
+				- formatearNumerico
+	
+	- FrameProyecto, se quito el metodo configurar eventos, ya que ningun 
+			pertencientes a los modelos debe tener eventos.
+	
+	- FrameEconomia, sus paneles y sub-paneles
+	- FrameIntegracion, sus paneles y sub-paneles		
+	- FrameConfigurarServidor
+	- FrameInternet 
+		- Se cambio totalmente el frame para agregar su funcionalidad de cargar
+	- EventoButton
+		- Se agrego un constructor para frameInternet, el @see, y objeto
+		- ActionPerformed se agrego evento.
+		
+	- PanelEscritorio
+		- Se modifico el metodo elegir Frame, para mejorar tipos de problemas de mosaico	
+		- Se ordeno el codigo, distribucion de metodos
+		- Por favor informar sobre estos cambios de codigo.
+	
+		
+	Se cambio Script de Datos
+		- Datos Economico real, 
+		- Proyecto para habilitar el enter	
+	
+	Acotacion:
+		
+		- Problemas con los tipos de mosaicos en el menu ventana
+		- Problemas con el carga las paginas.
+		- La clase Conducta se deberia llamar tipoConducta, para seguir
+ 		el estandar fabricado por el		
+			
+**********************************************************************************
+13 de diciembre
+
+Cambios:
+	- En el modulo de Economia
+	- FrameConfiguradorInternet
+	- FrameInternet
+	- Se creo una clase del tipo Evento, cual es eventoTextField, que sirve cuando se
+		pulsa enter en el textField.
+	- Servicio, se agrego un metodo para solucionar problemas de redondeo, es facil
+	 			de usar, sin trucos.
+	- CargadorPagina
+	- EventoButton
+	- EventoLink
+	- BaseDatoMotor				
+		
+	Script de datos:
+		- En configuracionBP
+		- En dato_Economico_real 
+		- Problemas en el insert de recurso, parece que faltan campos
+	
+	Acotacion:
+		- Se encontraron los cuales son parece problemas 
+		  con respecto a la red neuronal BP
+		 
+		 
+		
+**********************************************************************************

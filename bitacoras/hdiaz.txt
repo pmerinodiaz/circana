@@ -1,0 +1,297 @@
+=======================================================================================================
+23/Agosto/2004:
+
+1.- Se agrega a la la clase FrameOperacion.java los siguientes paneles:
+	- PanelEjecucionOperacion.
+	- PanelTransporteOperacion
+	- PanelReporteOperacion
+	- PanelConfiguracionOperacion
+
+2.- Se agrega la clase PanelEscritorio.java los siguientes metodos:
+	- elegirEjecucionOperacion()
+	- elegirTransporteOperacion()
+	- elegirReporteOperacion()
+	- elegirConfiguracionOperacion()
+
+3.- Se agrega a la clase PanelVisor.java:
+	- Se crean e incorporan los item del modelo operativo: "ejecutar", "transporte", 
+	"reporte", "configuracion".
+	- se agregan los metodos: obtenerEjecucionOperacion(), obtenerTransporteOperacion()
+	obtenerReporteOperacion(), obtenerConfiguracionOperacion()
+
+4.- Se agrega a la clase FrameCircanaPro.java:
+	- Los metodos ejecucionOperacion, transporteOperacion, reporteOperacion, configuracionOperacion
+
+5.- Se agregan los eventos asociados a los items del modulo operacion: ejecuctar, transporte, reporte
+    y configuracion.
+
+=======================================================================================================
+24/Agosto/2004:
+
+1.- Se agrega a la la clase PanelBotonera.java los siguientes botones:
+	- botonEjecucionOperacion
+	- botonTransporteOperacion
+	- botonReporteOperacion
+	- botonConfiguracionOperacion
+
+2.- Se crean estos botones, se incorporan a la botonera, se incorporan el escuchador de eventos y se 
+    incorporan los métodos que devuelven los botones de cada item.
+
+3.- Se agregan a la clase EventoButton.java los eventos de botones correspondientes al PanelBotonera para
+    el modelo operativo.
+
+4.- Modificación de la clase PanelConfiguracionOperacion.java
+
+5.- Incorporación de la clase SubPanelConfiguracionAG.java
+
+=======================================================================================================
+25/Agosto/2004:
+
+1.- Se agrega en el método cargar de la clase Proyecto.java la llamada al método cargar de la clase
+	ConfiguracionAGT.java.
+	
+2.- Se incorporan a la clase EventoButton.java:
+	- Un constructor para ser llamado de la clase SubPanelConfiguracionAG.java.
+	- Los eventos producidos por los botones de la clase SubPanelConfiguracionAG.java.
+=======================================================================================================
+06/Septiembre/2004:
+
+1.- Se modifica la clase PanelConfiguracionOperacion.
+
+2.- Se modfica la clase SubPanelConfiguracionAGT.
+	
+3.- Se quitan a la clase EventoButton.java:
+	- Un constructor para ser llamado de la clase SubPanelConfiguracionAG.java.
+	- Los eventos producidos por los botones de la clase SubPanelConfiguracionAG.java.
+
+=======================================================================================================
+07/Septiembre/2004:
+
+1.- Se modifica la clase PanelTransporteOperacion.
+
+2.- Se incorpora el evento de boton a la EventoButton para el boton Aceptar.
+
+3.- Se incorporan las clases SubPanelMatrizCostos, SubPanelRestricciones,
+	SubPanelOferta, SubPanelDemanda, SubPanelCapacidad.
+	
+4.- Modificaciones a la clase ConfiguracionAGT.
+
+5.- Modificaciones a la clase AlgoritmoGeneticoTransporte.
+
+6.- Modificacion clase EventoTree.
+=======================================================================================================
+30/Septiembre/2004
+
+1.- Se modifican y renombran (agregar al final del nombre operacion) las clases:
+	- SubPanelOferta, SubPanelDemanda y SubPanelCapacidad.
+
+2.- Se modifica el PanelTransporteOperacion y sus SubPaneles de Matriz de Costo y Restricciones.
+
+3.- Se modifica la clase PanelReporteOperacion y AlgoritmoGeneticoTransporte.
+
+4.- Se modifica la clase TablaSwing y ModeloTabla.
+
+5.- Se crean las clases CampoNumerico, DocumentoNumerico y FormatoDecimal.
+
+6.- Se crea la clase FrameAbrirGuardarProyecto.
+
+7.- Se crea la clase EventoComboBox.
+
+8.- Se incorporan nuevas imagenes en la carpeta img.
+
+=======================================================================================================
+04/Octubre/2004
+
+1.- Se modifica la clase Proyecto en los siguientes métodos:
+	- guardar()
+	- guardarComo()
+	- estaRepetidoNombre()
+	- buscarCodigoProyecto()
+	- obtenerTodosProyectos()
+
+2.- Se modifica la clase FrameCircanaPro en los siguientes métodos:
+	- abrir()
+	- guardar()
+	- guardarComo()
+
+3.- Se incorporan los eventos para FrameAbrirGuardarProyecto en la clase EventoButton.
+
+4.- Se crea la clase EventoLista.java.
+
+5.- Se modifica la clase TablaSwing: 
+	- Se incorpora el constructor TablaSwing(String[] nombreColumnas, Object[][] datos).
+	
+6.- Se modifica la clase PanelConfiguracionEconomia en lo métodos (establecerModificado):
+	- cargarConfiguracion.
+	- cambiarConfiguracion.
+	
+=======================================================================================================	
+07/Octubre/2004
+
+1.- Se modifica la clase AbrirGuardarProyecto.
+
+2.- Se modifica la clase FrameOperacion y la clase ProcesoSegundoPlano.
+
+3.- Se modifican las clases ConfiguracionAGT y SubPanelConfiguracionAGT.
+
+4.- Se agregan script para tablas de configuracion.
+
+=======================================================================================================	
+11/Octubre/2004
+
+1.- Se modifica modelo conceptual.
+
+2.- Se modifican script de tablas y datos.
+
+3.- Se modifica la clase AlgoritmoGeneticoTransporte.
+
+4.- Se modifica la clase EventoButton en la acción del panel Abrir/Guardar Proyecto.
+
+5.- Se agregan los métodos cargarPoyecto y guardarProyecto en la clase FrameCircanaPro.
+
+6.- Se modifica la clase AbrirGuardarProyecto.
+
+(*) 7.- Se modifica los métodos nuevo en la clase FrameCircanaPro. Además se crea el método nuevoProyecto.
+    y se cambian los eventos de botones y menu para cargar un nuevo proyecto.
+    
+8.- Se modifica la clase SubPanelConfiguracionAGT.
+
+9.- Se establecen los frames y paneles como publicos.
+
+=======================================================================================================	
+13/Octubre/2004
+
+1.- Se modifica el método guardarComo() de la clase Proyecto.
+
+2.- Se crea el método cargarConfiguracion() en la clase SubPanelConfiguracionAGT y en
+	la clase FrameOperacion.
+
+3.- Se modifica el método cargarConfiguracion en la clase PanelEscritorio.
+
+=======================================================================================================	
+09/Noviembre/2004
+
+1.- Se modifica el metodo guardarProyecto en FrameCircanaPro.
+
+2.- Se modifica el metodo constructor de PanelReporteOperacion en la clase EventoButton.
+
+3.- Se modifica la accion del boton imprimir reporte en EventoButton.
+
+4.- Se modifican las clases:
+	- AlgoritmoGeneticoTransporte.
+	- PanelReporteOperacion.	
+	- FrameOperacion.
+
+5.- Se modifica el orden de los paneles de Transporte y Ejecucion en PanelVisor y 
+	PanelBotonera.
+
+=======================================================================================================	
+10/Noviembre/2004
+
+1.- Se modifican las clases:
+	- AlgoritmoGeneticoTransporte.
+	- PanelReporteOperacion.	
+	- FrameOperacion.
+
+2.- Se incorporan las clases:
+	- ElementoRuta.
+	- VectorRuta.
+	- IndividuoRuta.
+	- SubPanelConfiguracionAGR.
+	- AlgoritmoGeneticoRuta.
+
+3.- Se modifica el metodo constructor y eventos correspondientes en la clase EventoButton:
+	- PanelTransporteOperacion
+	- PanelEjecucioOperacion.
+	- PanelReporteOperacion.	
+	- PanelConfiguracionOperacion.
+	- Se quita el constructor y el atributo SubPanelConfiguracionAGT.
+
+4.- Se modifica la accion de los botonones del panel configuracion en EventoButton.
+
+5.- Se modifica la clase Proyecto en los métodos (en cargar configuracion) :
+	- cargar.
+	- guardar (ademas correccion fecha_inicial a fecha_inicial_proyecto).
+	- guardarComo.
+
+=======================================================================================================	
+16/Noviembre/2004
+
+1.- Se concluye la construccion de AlgoritmoGeneticoRuta.
+
+2.- Dudas sobre modelo conceptual:
+	- Tabla Caladero: ¿ Se forman caladeros por cada dia similado ? ¿ Como identificarlos sin dia y añio ?
+			  ¿ Por que unidad esta asociada solamente con caladero_resultado ?
+
+	- Incorporar tabla ruta.
+	
+	- Eliminar tabla dato_operativo y dato_operativo_real (ver relaciones a otra tablas).
+	
+=======================================================================================================	
+15/Diciembre/2004
+
+1.- Carpeta operacion.
+
+2.- Carpeta librerias:
+	- ModeloTabla.
+	- FormatoDecimal.
+
+3.- Carpeta configuraciones:
+	- ConfiguracionAGR.
+	- ConfiguracionAGT.
+	
+4.- Carpeta administraciones.
+	- FrameMedioTransporte.
+	- FramePuntoDemanda.
+
+5.- Se modifica ProcesoSegundoPlano en el proceso de operacion.
+
+6.- Se modifica la clase EventoBoton en el panelReporteOperacion Guardar Resultados.
+
+Nota: El motivo por el cual cuando se guardan dos resultados ecosistemicos indica duplicacion
+de la clave primaria en dato_ecosistemico_resultado, es que al momento de guardar se borran solo
+los datos de la tabla caladero_real.
+
+=======================================================================================================	
+28/Diciembre/2004
+
+Análisis de Integración
+
+1.- Panel Planificación.
+		
+	* Se ingresa cantidad actual de stock.
+	* Se selecciona la red neuronal del modulo económico.
+	* Evento Inicializar:
+		- Verificar si existen resultados para cada modulo.
+		- Si existen resultados:
+			 * Graficar curvas.
+			 * Activar boton ejecutar.
+	* Evento Ejecutar:
+		- Generar el reporte de la planificación.
+		- Deshabilitar boton ejecutar.
+
+2.- Panel Graficar.
+	
+	* Eventos avanzar y retroceder los años de simulación.
+	
+3.- Panel Reporte.
+
+	* Eventos imprimir y guardar resultados.
+
+4.- Cambio clase Evento Boton para reporte ecosistema en boton guardar resultados.
+
+=======================================================================================================	
+03/Enero/2005
+
+1.- Se modifica el modelo de integración.
+
+2.- Se modifica el método cambiarResultadoOperativo en Proyecto.
+
+3.- Se modifica la clase FrameOperacion.
+
+4.- Se modifica la clase EventoComboBox constructor para clase SubpanelConfiguracionAGT y 
+	evento asociado al combo funcion de evaluación.
+	
+5.- Cambiar insert de configuraciones de transporte.
+
+6.- Copiar carpeta experimentos del modulo operación.

@@ -1,0 +1,4 @@
+servidor = localhost
+usuario = circanapro
+contrasenia = circanaprokey
+basedato = circanapro

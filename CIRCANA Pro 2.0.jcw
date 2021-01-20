@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>CIRCANA Pro 2.0</label>
+	</settings>
+	<users>
+		<user>
+			<path>CIRCANA Pro 2.0.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>CIRCANA Pro 2.0.jcp</path>
+		</project>
+	</projects>
+</workspace>
